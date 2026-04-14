@@ -1,0 +1,15 @@
+    * { 
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+            }
+
+    html {  
+    /* On ramène la base à 10px (62.5% de 16px) */
+    font-size: 62.5%;
+    }
+
+    body {
+    font-family: 'poppins';
+    }
+
