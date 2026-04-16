@@ -1,118 +1,207 @@
-    * { 
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-            }
-
-    html {   
-    /* On ramène la base à 10px (62.5% de 16px)  POur utiliser le rem*/
-    font-size: 62.5%;
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
     }
-
+    
+    html {
+        /* On ramène la base à 10px (62.5% de 16px)  POur utiliser le rem*/
+        font-size: 62.5%;
+    }
+    
     body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #E4EEF0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #E4EEF0;
     }
-
-                header {
-                height: auto;
-                width: auto;
-                background-color: #fff;
-                flex-wrap: wrap;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-                position: sticky;
-                top: 0;
-                z-index: 1000;
-                }
-                /* partie des lien de navigations */
-
-
-                 nav ul {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                padding-left: 2%;
-                padding-right: 3%;
-                list-style: none;
-                gap: 2rem;
-                }
-
-                .logo {
-                        text-decoration: none;
-                        font-size: 2.2rem;
-                        font-weight: 700;
-                        font-style: italic;
-                    }
-
-                            nav {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            padding: 1rem 5%; 
-                            max-width: 1400px;
-                            margin: 0 auto;
-                            }
-
-                nav ul li {
-                list-style: none;
-                }
-
-                li a {
-                text-decoration: none;
-                flex-wrap: wrap;
-                 text-decoration: none;
-                color: #333;
-                font-size: 1.5rem;
-                font-weight: 600;
-                transition: color 0.3s;
-                } 
-                /* design du logo */
-                .Omni {
-                        color: #1790DC;
-                }
-
-                .Soin {
-                          color: #50DD8F;
-                }
-
-                /* partie du bouton de connexion */
+    
+    header {
+        height: auto;
+        width: auto;
+        background-color: #fff;
+        flex-wrap: wrap;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    /* partie des lien de navigations */
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: 2%;
+        padding-right: 3%;
+        list-style: none;
+        gap: 2rem;
+    }
+    
+    .logo {
+        text-decoration: none;
+        font-size: 2.2rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    nav ul li {
+        list-style: none;
+    }
+    
+    li a {
+        text-decoration: none;
+        flex-wrap: wrap;
+        text-decoration: none;
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    /* design du logo */
+    
+    .Omni {
+        color: #1790DC;
+    }
+    
+    .Soin {
+        color: #50DD8F;
+    }
+    /* partie du bouton de connexion */
+    
+    .connexion {
+        height: auto;
+        width: auto;
+        flex-wrap: wrap;
+    }
+    /* lien du bouton connexion  */
+    
+    .connexion a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+        background-image: linear-gradient(to right, #4AC29A 0%, #BDFFF3 51%, #4AC29A 100%);
+        display: inline-block;
+        background-size: 200% auto;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 0.8rem;
+        transition: 0.5s;
+        text-align: center;
+    }
+    /* transition hover */
+    
+    .connexion:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .connexion a:hover {
+        color: #1790DC;
+        background-position: right center;
+        transform: translateY(-2px);
+    }
+    
+    nav ul li a:hover {
+        color: #1790DC;
+    }
+    /* Responsive du header */
+    /* Tablette et petits laptops (moins de 992px) */
+    
+    @media screen and (max-width: 992px) {
+        nav {
+            padding: 1rem 3%;
+            /* On réduit légèrement les marges */
+        }
+        nav ul {
+            gap: 1.5rem;
+            /* On resserre les liens */
+        }
+    }
+    /* Smartphone et Tablettes en portrait (moins de 768px) */
+    
+    @media screen and (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            /* je met en mod verti pour éviter le chevauchement */
+            gap: 2rem;
+            padding: 2rem 5%;
+        }
+        nav ul {
+            justify-content: center;
+            padding: 0;
+            width: 100%;
+        }
+        nav ul li a {
+            font-size: 1.6rem;
+            /* Légère réduction pour rendre ca frais au visuel */
+        }
         .connexion {
-                height: auto;
-                width: auto;
-                flex-wrap: wrap;
-                }  
-/* lien du bouton connexion  */
-                .connexion a { 
-                        text-decoration: none;
-                        color: white;
-                        font-size: 1.3rem;
-                         background-image: linear-gradient(to right, #4AC29A 0%, #BDFFF3 51%, #4AC29A 100%);
-                        display: inline-block;
-                        background-size: 200% auto;
-                        padding: 1rem 2rem;
-                        color: white;
-                        text-decoration: none;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        border-radius: 0.8rem;
-                        transition: 0.5s;
-                        text-align: center;
-                } 
-                          /* transition hover */
-
-         .connexion:hover {
-                background-position: right center;
-                color: #fff;
-                text-decoration: none;
-                }
-                
-                .connexion a:hover {
-                        color: #1790DC;
-                         background-position: right center;
-                         transform: translateY(-2px);
-                }
-              nav ul li a:hover {
-                    color: #1790DC;
-                }
-                /* Responsive du header */
+            width: 100%;
+            text-align: center;
+        }
+        .connexion a {
+            width: 80%;
+            /* Bouton plus large pour le pouce sur mobile */
+            max-width: 300px;
+        }
+    }
+    /* Très petits smartphones (moins de 480px) */
+    
+    @media screen and (max-width: 480px) {
+        nav ul {
+            flex-direction: column;
+            /* Les liens passent en liste verticale */
+            gap: 1rem;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2rem;
+        }
+    }
+    /* Desktop Standard (1024px et plus) */
+    
+    @media screen and (min-width: 1024px) {
+        nav {
+            padding: 1.5rem 5%;
+            /* On donne de l'air au header */
+        }
+        /* Animation subtile pour les liens en mode PC */
+        nav ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #1790DC;
+            transition: width 0.3s;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+    }
+    /* Très Grands Écrans / TV (1440px et plus) */
+    
+    @media screen and (min-width: 1440px) {
+        nav {
+            max-width: 1400px;
+            /* On empêche le menu de s'éparpiller trop loin */
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        .logo {
+            font-size: 2.6rem;
+            /* On augmente la visibilité sur grand écran */
+        }
+    }
