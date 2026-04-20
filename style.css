@@ -23,6 +23,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom:0.1rem solid rgba(0, 0, 0, 0.243);
 }
 
 
@@ -426,7 +427,7 @@ nav ul li a:hover {
 
 .blc1 {
     height: 50%;
-    background-image: url(./Images/trouver\ un\ medcin.png);
+    background-image: url(./Images/Medcin_trouve.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -441,7 +442,7 @@ nav ul li a:hover {
 
 .blc2 {
     height: 50%;
-    background-image: url(./Images/trouver\ un\ medcin.png);
+    background-image: url(./Images/hero\ de\ pharmacie.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -449,7 +450,7 @@ nav ul li a:hover {
 
 .blc3 {
     height: 50%;
-    background-image: url(./Images/trouver\ un\ medcin.png);
+    background-image: url(./Images/rendez\ vous\ vv.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -551,11 +552,11 @@ nav ul li a:hover {
 
 .maps_d {
     height: 50rem;
-    background-image: url(./Images/hero\ de\ pharmacie.png);
+    background-image: url(./Images/maps_pc.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* je dois mettre la vrai images */
+    
 }
 
 
@@ -618,7 +619,10 @@ nav ul li a:hover {
 .sect3 {
     height: 90rem;
     width: 100%;
-    border: 2px solid red;
+     flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 .sect3 h1 {
@@ -632,38 +636,71 @@ nav ul li a:hover {
     font-size: 2rem;
 }
 
-.Pharm {
-    height: 80%;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-around;
-}
 
+/* la div blanche qui contient les elemnts */
 .ph {
     height: 18.7rem;
-    border: 2px solid green;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
     background-color: #fff;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-shadow: 0 0 1.2rem;
 }
-
+/* la div qui contient l images */
 .ph1 {
     height: 10rem;
     width: 8%;
-    border: 2px solid black;
+    margin-left: 2%;
+    background-image: url(./Images/logo\ de\ pharmacie.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* la div qui contient  tout les elemntx texte  et autre a coté de l' images */
+.ph2 {
+    height: 10rem;
+    width: 87%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* partie des  span color */
+
+.ph2 h1 {
+    text-decoration: none;
+    font-style:oblique ;
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size:1.9rem ;
     margin-left: 2%;
 }
 
-.ph2 {
-    height: 10rem;
-    width: 30%;
-    border: 2px solid;
+.dispo {
+    color: #50dd90a9;
 }
 
-.ph3 {
-    height: 10rem;
-    width: 20%;
-    border: 2px solid;
-    margin-right: 1%;
+.heur{
+    color: #00000074;
 }
+
+        .ph2 p {
+        font-style: oblique;
+        font-size: 1.6rem;
+        font-family: 'poppins';
+        margin-right: 2%;
+
+        }
+
+        /* fin de la sect 3  debut de la sect 4*/
+        /* =============================================== */
+        /* apres je fait la responsive de cette partie ici */
+        /* =============================================== */
+
+        .sect4 {
+
+
+        }
+        
