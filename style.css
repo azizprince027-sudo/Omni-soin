@@ -940,6 +940,83 @@ hr {
 }
 
 
+/* responsive de  la bar de filtre */
+
+
+/* 1. MOBILE Téléphones - Moins de 768px */
+
+@media screen and (max-width: 767px) {
+    .bar_info {
+        width: 90%;
+        height: auto;
+        /*  laisse la hauteur s'adapter au contenu */
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    .bar_info input,
+    .bar_info select,
+    .btn-submit {
+        width: 100%;
+        /* Tout le gbnhi prend la largeur totale */
+        margin: 0;
+        height: 4rem;
+    }
+    hr {
+        width: 100%;
+        /* La barre devient horizontale sur mobile */
+        height: 1px;
+        border: 0.1px solid #eee;
+    }
+    .sect4 h1 {
+        font-size: 2rem;
+        /* On réduit le titre pour éviter les coupures */
+    }
+}
+
+
+/* 2. TABLETTE 768px à 1024px */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .bar_info {
+        width: 80%;
+        height: 7rem;
+    }
+    .bar_info input,
+    .bar_info select {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* 3. DESKTOP / PC STANDARD  */
+
+@media screen and (min-width: 1025px) {
+    .bar_info {
+        width: 60%;
+        /* 50% c'était un peu serré pour 3 champs + bouton */
+    }
+}
+
+
+/* 4. GRANDS ÉCRANS PC / TÉLÉVISION (Plus de 1920px) */
+
+@media screen and (min-width: 1921px) {
+     :root {
+        font-size: 2rem;
+        /* la lisibilité de loin */
+    }
+    .bar_info {
+        width: 40%;
+        /* On resserre pour ne pas que ça fasse trop "étiré" */
+        height: 10rem;
+    }
+    .sect4 h1 {
+        font-size: 5rem;
+    }
+}
+
+
 /* partie qui connait les div blanche */
 
 .Medcin {}
