@@ -10,11 +10,37 @@
 
 <body>
     <form class="search-container">
-        <div class="search-box">
-            <span class="search-icon">🔍</span>
-            <input type="text" name="query" placeholder="Pharmacie de garde" id="search-input">
-            <button type="submit" class="search-btn">Rechercher</button>
-        </div>
+        <form class="search-bar-form">
+            <div class="input-wrapper">
+                <div class="field">
+                    <input type="text" placeholder="Spécialité" list="specs">
+                    <datalist id="specs">
+                <option value="Cardiologue">
+                <option value="Dentiste">
+                <option value="Généraliste">
+            </datalist>
+                </div>
+
+                <div class="line-divider"></div>
+
+                <div class="field">
+                    <input type="text" placeholder="Ville (ex: Abidjan)">
+                </div>
+
+                <div class="line-divider"></div>
+
+                <div class="field">
+                    <select>
+                <option value="" disabled selected>Disponibilité</option>
+                <option value="now">Maintenant</option>
+                <option value="today">Aujourd'hui</option>
+                <option value="week">Cette semaine</option>
+            </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">rechercher</button>
+        </form>
     </form>
 </body>
 

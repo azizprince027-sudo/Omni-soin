@@ -1,67 +1,53 @@
-/* Conteneur principal pour centrer la barre sur la page */
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-
-/* La boîte de recherche grise */
-
-.search-box {
+.search-bar-form {
     display: flex;
     align-items: center;
-    background-color: #f1f3f4;
-    /* Gris clair comme sur ton image */
+    gap: 15px;
+    background-color: transparent;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #dbdbdb;
     border-radius: 8px;
-    padding: 6px 12px;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    flex-grow: 1;
 }
 
-
-/* L'icône loupe */
-
-.search-icon {
-    color: #5f6368;
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-
-/* Le champ de saisie */
-
-.search-box input {
+.field {
     flex: 1;
-    /* Prend tout l'espace disponible */
+}
+
+
+/* LE SECRET : On retire le design par défaut des inputs */
+
+.field input,
+.field select {
+    width: 100%;
     border: none;
-    background: transparent;
-    padding: 10px;
-    font-size: 16px;
-    color: #3c4043;
     outline: none;
-    /* Enlève la bordure au clic */
+    /* Supprime le contour bleu au clic */
+    padding: 10px;
+    font-style: italic;
+    color: #666;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
 }
 
+.line-divider {
+    width: 1px;
+    height: 30px;
+    background-color: #eee;
+    margin: 0 10px;
+}
 
-/* Le bouton bleu */
-
-.search-btn {
-    background-color: #207398;
-    /* Le bleu de ton image */
-    color: #ffffff;
+.btn-submit {
+    background-color: #7d73b2;
+    color: white;
     border: none;
-    border-radius: 6px;
-    padding: 10px 24px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.search-btn:hover {
-    background-color: #1a5d7a;
-    /* Un bleu plus foncé au survol */
 }
