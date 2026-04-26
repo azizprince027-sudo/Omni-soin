@@ -1077,4 +1077,84 @@
             /* gros bouton */
         }
     }
-    /* fin de la responsive */
+    /* fin de la responsive et debut de la sect5*/
+    
+    .sect5 {
+        height: auto;
+        width: 100%;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        padding: 3%;
+        gap: 6rem;
+    }
+    /*    titre de la section 5 */
+    
+    .sect5 h1 {
+        text-align: center;
+        text-decoration: underline;
+        font-family: 'poppins';
+        font-weight: 300;
+        font-style: italic;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        font-size: 3rem;
+    }
+    /* premiere div  qui  contient le text */
+    
+    .blct1 {
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 0.8rem;
+    }
+    
+    .blct1 h1 {
+        color: #1790DC;
+        text-decoration: none;
+        font-style: italic;
+        font-family: 'poppins';
+        font-weight: bolder;
+    }
+    
+    .blct2 {
+        width: 70%;
+        height: auto;
+        background-color: #fff;
+        padding: 2%;
+    }
+    
+    .blct2 h1 {
+        font-weight: bolder;
+    }
+    
+    .blct2 p {
+        font-size: 1.9rem;
+        text-align: center;
+        font-family: 'poppins';
+        font-style: italic;
+    }
+    
+    .blct3 {
+        width: 80%;
+        height: auto;
+        background-color: #fff;
+        padding: 2%;
+    }
+    
+    .blc3 h1 {
+        font-weight: bolder;
+    }
+    
+    .blct3 p {
+        font-size: 1.9rem;
+        text-align: center;
+        font-family: 'poppins';
+        font-style: italic;
+    }
+    /* je suis fe demain or */
