@@ -551,13 +551,14 @@
         flex-direction: column;
         display: flex;
         justify-content: space-around;
+        background: linear-gradient(135deg, #0d4aa2 0.000%, #0f44be 25.000%, #1256d7 50.000%, #1581ee 75.000%, #17c3ff 100.000%);
     }
     
     .sect3 h1 {
         text-align: center;
         text-decoration: underline;
         font-family: 'poppins';
-        font-weight: 300;
+        font-weight: bolder;
         font-style: italic;
         padding-top: 3%;
         padding-bottom: 3%;
@@ -723,7 +724,7 @@
         text-align: center;
         text-decoration: underline;
         font-family: 'poppins';
-        font-weight: 300;
+        font-weight: bolder;
         font-style: italic;
         padding-top: 3%;
         padding-bottom: 3%;
@@ -790,6 +791,7 @@
         background-size: 15px;
         padding-right: 30px;
         cursor: pointer;
+        background-color: transparent;
     }
     /* le boutton */
     
@@ -800,7 +802,8 @@
         border-radius: 10px;
         font-weight: bold;
         cursor: pointer;
-        margin-right: 2%;
+        margin-right: 1%;
+        margin-left: 1%;
         font-size: 1.5rem;
         background-image: linear-gradient(to right, #07fafea9 0%, #1790DC 51%, #001eff 100%);
         display: inline-block;
@@ -1082,13 +1085,13 @@
     .sect5 {
         height: auto;
         width: 100%;
-        width: 100%;
-        height: auto;
         flex-direction: column;
         display: flex;
         align-items: center;
         padding: 3%;
         gap: 6rem;
+        /* https://grabient.com/LQJgdArAjCA0kAYrwgZgBwoCwHZ44DYF4CRkwy8xUDV4oBOPY8BBrWLMKdB2YqGATD4IdHARA */
+        background: linear-gradient(90deg, #00ffc4 0.000%, #00ffbc 16.667%, #00ffb3 33.333%, #00f6aa 50.000%, #00e5a1 66.667%, #00d398 83.333%, #00c08f 100.000%);
     }
     /*    titre de la section 5 */
     
@@ -1096,7 +1099,7 @@
         text-align: center;
         text-decoration: underline;
         font-family: 'poppins';
-        font-weight: 300;
+        font-weight: bolder;
         font-style: italic;
         padding-top: 3%;
         padding-bottom: 3%;
@@ -1120,6 +1123,7 @@
         font-style: italic;
         font-family: 'poppins';
         font-weight: bolder;
+        font-weight: 300;
     }
     
     .blct2 {
@@ -1147,7 +1151,7 @@
         padding: 2%;
     }
     
-    .blc3 h1 {
+    .blct3 h1 {
         font-weight: bolder;
     }
     
@@ -1157,4 +1161,167 @@
         font-family: 'poppins';
         font-style: italic;
     }
-    /* je suis fe demain or */
+    /* partie de transition hover*/
+    .blct2:hover, .blct3:hover {
+    transform: translateY(-3rem); 
+    box-shadow: 0 0  2rem 3rem rgba(0, 0, 0, 0.1); /* L'ombre s'accentue */
+    border: 1rem solid #000000; 
+    border-radius: 2rem;
+}
+    /*
+    AJOUT RESPONSIVE  SECTION 5 
+    */
+
+/* 1. TABLETTE  */
+@media screen and (max-width: 1024px) {
+    .sect5 {
+        gap: 3.5rem; 
+        padding: 5% 2%;
+    }
+    .blct1 {
+        width: 75%; /* Plus large pour ne pas déborder le texte */
+    }
+    .blct2, .blct3 {
+        width: 85%;
+    }
+}
+
+/* 2. MOBILE   */
+@media screen and (max-width: 480px) {
+    .sect5 {
+        gap: 2rem; 
+        padding: 10% 4%;
+    }
+    .sect5 h1 {
+        font-size: 1.8rem; 
+    }
+    .blct1, .blct2, .blct3 {
+        width: 95%; 
+        padding: 6% 4%;
+    }
+    .blct1 h1 {
+        font-size: 1.4rem;
+    }
+    .blct2 p, .blct3 p {
+        font-size: 1.1rem; 
+        text-align: left; 
+    }
+}
+
+/*  3. TÉLÉVISION  */
+@media screen and (min-width: 1920px) {
+    .sect5 {
+        max-width: 1600px; 
+        margin: 0 auto; /* Centrage de la section sur l'écran TV */
+        gap: 8rem;
+    }
+    .sect5 h1 {
+        font-size: 4.5rem;
+    }
+    .blct1 h1 {
+        font-size: 3rem;
+    }
+    .blct2 p, .blct3 p {
+        font-size: 2.2rem; /* Grand pour une lecture à distance (*/
+        line-height: 1.6;
+    }
+}
+
+/* fin du main  debut du footer  */
+
+footer {
+    height: auto;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    background-color: #0E3A45;
+
+}
+/* le  bloc de tout les elements de gauche */
+.BLOC {
+    height: auto;
+    width: 30%;
+    padding: 1.2rem 2rem;
+}
+/* la div quui cointient les icones  */
+.icon_envelop{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+/* j ai ciblé les svg */
+.icon_envelop svg {
+    height: 4rem;
+    width: 4rem;
+}
+/* j ai ciblé les p ratacher au different   p */
+.icon_envelop p {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.4rem;
+}
+/* le petit paragraphe de fin c est un span que j ai ajouté */
+.description {
+    color: #50DD8F;
+}
+/* le bloc du milieu */
+.BLOC2 {
+    height: auto;
+    width: 30%;
+    padding: 1.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/* le titre du bloc du milieu */
+.BLOC2 h1 {
+    font-family: 'poppins';
+    font-style: italic;
+    font-weight: bolder;
+    color: #fff;
+}
+/* les lien du bloc du milieu */
+.BLOC2 a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'poppins';
+    color: #1790DC;
+}
+/* bloc de fin */
+.BLOC3 {
+    height: auto;
+    width: 28%;
+    padding: 1.2rem 2rem;
+    padding-left: 5%;
+    padding-bottom: 4%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
+/* le texte du bloc de fin  */
+.BLOC3 h1 {
+    font-size: 1.8rem;
+    font-family: 'poppins';
+    font-weight: bolder;
+    font-style: italic;
+    color: #fff;
+}
+
+/* partie des transitions hover */
+
+.BLOC2 a:hover {
+    color: #4AC29A;
+}
+/* partie du (c) */
+.oni p {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bolder;
+    font-weight: 300;
+}
+/* fin du code */
