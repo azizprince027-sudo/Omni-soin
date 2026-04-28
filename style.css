@@ -271,8 +271,7 @@
     /* ::placeholder {
     color: #1790DC; POUR LA  couleur du texte saisi
 } */
-    /* 
-   RESPONSIVE  POur les tel telé pc et bureau
+    /*  RESPONSIVE  POur les tel telé pc et bureau
   */
     /* 1. TÉLÉVISION / ULTRA-WIDE)
    l'affichage pour les très grands écrans > 1920px */
@@ -546,7 +545,7 @@
     /* fin de la section12 debut de la sect3 */
     
     .sect3 {
-        min-height: auto;
+        height: auto;
         width: 100%;
         flex-direction: column;
         display: flex;
@@ -568,6 +567,7 @@
     
     .ph {
         height: 18.7rem;
+        width: 93%;
         display: flex;
         align-items: center;
         background-color: #fff;
@@ -716,7 +716,7 @@
     /* fin de la responsive et debut de la sect4 */
     
     .sect4 {
-        min-height: 100vh;
+        height: auto;
         width: 100%;
     }
     
@@ -1081,7 +1081,6 @@
         }
     }
     /* fin de la responsive et debut de la sect5*/
-    
     .sect5 {
         height: auto;
         width: 100%;

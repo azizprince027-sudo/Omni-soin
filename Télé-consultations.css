@@ -1,4 +1,4 @@
-    * {
+* {
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
@@ -23,6 +23,7 @@
         position: sticky;
         top: 0;
         z-index: 1000;
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.243);
     }
     /* partie des lien de navigations */
     
@@ -62,7 +63,7 @@
         flex-wrap: wrap;
         text-decoration: none;
         color: #333;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 600;
         transition: color 0.3s;
     }
@@ -171,7 +172,7 @@
             font-size: 2rem;
         }
     }
-    /* Desktop Standard (1024px et plus) */
+    /* Desktop Standard 1024px et plus */
     
     @media screen and (min-width: 1024px) {
         nav {
@@ -196,12 +197,518 @@
     @media screen and (min-width: 1440px) {
         nav {
             max-width: 1400px;
-            /* On empêche le menu de s'éparpiller trop loin */
+            /*  empêche le menu de s'éparpiller trop loin */
             margin: 0 auto;
             padding: 2rem 0;
         }
         .logo {
             font-size: 2.6rem;
-            /* On augmente la visibilité sur grand écran */
+            /*  augmente la visibilité sur grand écran */
         }
     }
+/* hero1*/
+    
+    .hero1 {
+        width: auto;
+        background-image: linear-gradient(#0000003a,#00000048 ), url(./Images/téléconsultations.png);
+        background-repeat: no-repeat;
+        /* 3. Centrer l'image horizontalement et verticalement */
+        background-position: center;
+        /* 4. COUVRIR toute la zone (La clé du responsive) */
+        background-size: cover;
+        /* 5. Fixer l'image ou la laisser défiler */
+        background-attachment: scroll;
+        /* 6. Hauteur minimale pour que l'image soit visible ossi pour les mobiles */
+        min-height: 100vh;
+        /* 7. Centrer le contenu par-dessus pour prendre la taille minimal 1vh =1% */
+        /* alignement des elements */
+        flex-direction: column;
+    }
+    /* partie qui contient le text et la search bar */
+    
+    .hero1 h1 {
+        color: #ffffffef;
+        font-family: 'poppins';
+        font-weight: 400;
+        font-size: 3rem;
+        font-style: oblique;
+        /* partie du text et input deplacement */
+        padding-top: 11%;
+        padding-left: 13%;
+    }
+    /* le search c est le formulaire  */
+    
+    .search {
+        width: 100%;
+        max-width: 50rem;
+        background-color: #fff;
+        border-radius: 0.8rem;
+        padding: 1rem 2rem;
+        margin-left: 13%;
+        margin-top: 2%;
+        display: flex;
+        align-items: center;
+        gap: 4%;
+    }
+    /* le svg voila ca  */
+    
+    .search-icon {
+        width: 2rem;
+        height: 2rem;
+        color: #888;
+        flex-shrink: 0;
+    }
+    
+    .search input {
+        background: transparent;
+        border: none;
+        flex: 1;
+        outline: none;
+        font-size: 2rem;
+        color: #07141088;
+    }
+    /* fin dela partie .hero1 */
+    /* ::placeholder {
+    color: #1790DC; POUR LA  couleur du texte saisi
+} */
+    /*  RESPONSIVE  POur les tel telé pc et bureau
+  */
+    /* 1. TÉLÉVISION / ULTRA-WIDE)
+   l'affichage pour les très grands écrans > 1920px */
+    
+    @media screen and (min-width: 1921px) {
+        .hero1 h1 {
+            font-size: 5rem;
+            padding-top: 150px;
+        }
+        .search {
+            max-width: 70rem;
+            padding: 1.5rem 3rem;
+        }
+    }
+    /* 2. DESKTOP STANDARD  */
+    
+    @media screen and (max-width: 1400px) {
+        .hero1 h1 {
+            font-size: 3.5rem;
+        }
+    }
+    /* 3. TABLETTE Entre 768px et 1024px */
+    
+    @media screen and (max-width: 1024px) {
+        .hero1 {
+            display: flex;
+            align-items: center;
+            /*  centre tout horizontalement */
+            justify-content: center;
+            /* centre verticalement */
+        }
+        .hero1 h1 {
+            padding-left: 0;
+            /*  annule le 13% que j ai mis pour bouger les  text /input */
+            padding-top: 0;
+            text-align: center;
+            font-size: 2.8rem;
+            width: 90%;
+        }
+        .search {
+            margin-left: 0;
+            /*  annule ton 13% */
+            margin-top: 2rem;
+            width: 80%;
+        }
+    }
+    /* 4. MOBILE Moins de 767px */
+    
+    @media screen and (max-width: 767px) {
+        .hero1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .hero1 h1 {
+            padding-left: 0;
+            padding-top: 0;
+            text-align: center;
+            font-size: 1.8rem;
+            /* Taille lisible sur les lalé */
+            line-height: 1.2;
+        }
+        /*  saut de ligne sur tel pour éviter les textes brisés */
+        .hero1 h1 br {
+            display: none;
+        }
+        .search {
+            margin-left: 0;
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            gap: 10px;
+        }
+        .search input {
+            font-size: 1.1rem;
+            /*  évite le zoom auto sur iPhone font < 16px*/
+        }
+        .search-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    /* debut du main */
+    /* fin de la responsive et debut de la sect5*/
+    .sect5 {
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        padding: 3%;
+        gap: 6rem;
+       background: #005C97;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    /*    titre de la section 5 */
+    
+    .sect5 h1 {
+        text-align: center;
+        text-decoration: underline;
+        font-family: 'poppins';
+        font-weight: bolder;
+        font-style: italic;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        font-size: 3rem;
+    }
+
+    .mal_tete {
+        border: 2px solid rgb(24, 184, 209);
+        height: 10rem;
+        width: 10%;
+        background-image: url(./Images/telé_\ consults\ mal\ de\ tete.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8rem;
+        margin: auto;
+    }
+    /* premiere div  qui  contient le text */
+    
+    .blct1 {
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00e5a1;
+        border-radius: 0.8rem;
+    }
+    
+    .blct1 h1 {
+        color: #1790DC;
+        text-decoration: none;
+        font-style: italic;
+        font-family: 'poppins';
+        font-weight: bolder;
+        font-weight: 300;
+    }
+    
+    .blct2 {
+        width: 70%;
+        height: auto;
+        background-color: #fff;
+        padding: 2%;
+    }
+    
+    .blct2 h1 {
+        font-weight: bolder;
+    }
+    
+    .blct2 p {
+        font-size: 1.9rem;
+        text-align: center;
+        font-family: 'poppins';
+        font-style: italic;
+    }
+    
+    .blct3 {
+        width: 80%;
+        height: auto;
+        background-color: #fff;
+        padding: 2%;
+    }
+    
+    .blct3 h1 {
+        font-weight: bolder;
+    }
+
+    .mal_ventre {
+        border: 2px solid rgb(61, 217, 14);
+        height: 10rem;
+        width: 8%;
+        background-image: url(./Images/telé_\ consults\ mal\ de\ ventre.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 7rem;
+        margin: auto;
+    }
+    
+    .blct3 p {
+        font-size: 1.9rem;
+        text-align: center;
+        font-family: 'poppins';
+        font-style: italic;
+    }
+    /* partie de transition hover*/
+    .blct2:hover, .blct3:hover {
+    transform: translateY(-3rem); 
+    box-shadow: 0 0  2rem 3rem rgba(0, 0, 0, 0.1); /* L'ombre s'accentue */
+    border: 1rem solid #000000; 
+    border-radius: 2rem;
+}
+    /*
+    AJOUT RESPONSIVE  SECTION 5 
+    */
+
+/* 1. TABLETTE  */
+@media screen and (max-width: 1024px) {
+    .sect5 {
+        gap: 3.5rem; 
+        padding: 5% 2%;
+    }
+    .blct1 {
+        width: 75%; /* Plus large pour ne pas déborder le texte */
+    }
+    .blct2, .blct3 {
+        width: 85%;
+    }
+}
+
+/* 2. MOBILE   */
+@media screen and (max-width: 480px) {
+    .sect5 {
+        gap: 2rem; 
+        padding: 10% 4%;
+    }
+    .sect5 h1 {
+        font-size: 1.8rem; 
+    }
+    .blct1, .blct2, .blct3 {
+        width: 95%; 
+        padding: 6% 4%;
+    }
+    .blct1 h1 {
+        font-size: 1.4rem;
+    }
+    .blct2 p, .blct3 p {
+        font-size: 1.1rem; 
+        text-align: left; 
+    }
+}
+
+/*  3. TÉLÉVISION  */
+@media screen and (min-width: 1920px) {
+    .sect5 {
+        max-width: 1600px; 
+        margin: 0 auto; /* Centrage de la section sur l'écran TV */
+        gap: 8rem;
+    }
+    .sect5 h1 {
+        font-size: 4.5rem;
+    }
+    .blct1 h1 {
+        font-size: 3rem;
+    }
+    .blct2 p, .blct3 p {
+        font-size: 2.2rem; /* Grand pour une lecture à distance (*/
+        line-height: 1.6;
+    }
+}
+/* fin du main  debut du footer  */
+
+footer {
+    height: auto;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    background-color: #0E3A45;
+
+}
+/* le  bloc de tout les elements de gauche */
+.BLOC {
+    height: auto;
+    width: 30%;
+    padding: 1.2rem 2rem;
+}
+/* la div quui cointient les icones  */
+.icon_envelop{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+/* j ai ciblé les svg */
+.icon_envelop svg {
+    height: 4rem;
+    width: 4rem;
+}
+/* j ai ciblé les p ratacher au different   p */
+.icon_envelop p {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.4rem;
+}
+/* le petit paragraphe de fin c est un span que j ai ajouté */
+.description {
+    color: #50DD8F;
+}
+/* le bloc du milieu */
+.BLOC2 {
+    height: auto;
+    width: 30%;
+    padding: 1.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/* le titre du bloc du milieu */
+.BLOC2 h1 {
+    font-family: 'poppins';
+    font-style: italic;
+    font-weight: bolder;
+    color: #fff;
+}
+/* les lien du bloc du milieu */
+.BLOC2 a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'poppins';
+    color: #1790DC;
+}
+/* bloc de fin */
+.BLOC3 {
+    height: auto;
+    width: 28%;
+    padding: 1.2rem 2rem;
+    padding-left: 5%;
+    padding-bottom: 4%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
+/* le texte du bloc de fin  */
+.BLOC3 h1 {
+    font-size: 1.8rem;
+    font-family: 'poppins';
+    font-weight: bolder;
+    font-style: italic;
+    color: #fff;
+}
+
+/* partie des transitions hover */
+
+.BLOC2 a:hover {
+    color: #4AC29A;
+}
+/* partie du (c) */
+.oni p {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bolder;
+    font-weight: 300;
+}
+/* fin du code */
+/* dbut de la responsive */
+
+/* 1. TABLETTE */
+@media screen and (max-width: 1024px) {
+    footer {
+        padding: 5%;
+    }
+    
+    .BLOC, .BLOC2, .BLOC3 {
+        width: 45%; /* deux colonnes pour éviter l'écrasement */
+        padding: 1rem;
+    }
+
+    .BLOC3 {
+        width: 100%; /* Le bloc social prend la largeur en bas */
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* 2. MOBILE Smartphones */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack vertical obligatoire */
+        align-items: center;
+        text-align: center;
+    }
+
+    .BLOC, .BLOC2, .BLOC3 {
+        width: 100%; /* Chaque bloc prend toute la place */
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Séparation légère */
+    }
+
+    .BLOC3 {
+        border-bottom: none;
+    }
+
+    .icon_envelop {
+        justify-content: center; /* Centrage des icônes sur mobile */
+        margin-bottom: 10px;
+    }
+
+    .icon_envelop p {
+        font-size: 1.1rem; /*  réduit la taille pour éviter les retours à la ligne bete bete */
+    }
+
+    .BLOC2 a {
+        font-size: 1.4rem;
+        margin: 8px 0;
+    }
+    
+    .icon_envelop svg {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+/* 3. PETIT MOBILE  */
+@media screen and (max-width: 480px) {
+    .icon_envelop p {
+        font-size: 0.9rem;
+    }
+
+    .BLOC2 h1, .BLOC3 h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 4. TÉLÉVISION  */
+@media screen and (min-width: 1921px) {
+    footer {
+        padding: 2% 15%; /*  augmente les marges latérales pour centrer le contenu */
+    }
+
+    .BLOC, .BLOC2, .BLOC3 {
+        max-width: 500px;
+    }
+
+    .icon_envelop p {
+        font-size: 1.8rem; /*scale vers le haut pour la visibilité de loin */
+    }
+
+    .BLOC2 a {
+        font-size: 2.2rem;
+    }
+}

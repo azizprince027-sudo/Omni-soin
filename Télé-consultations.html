@@ -9,26 +9,123 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <header>
+   <header>
         <nav>
-
-                <a
-                    class="logo" href="index.html"><span class="Omni">Omni<span class="Soin">Soin</span>
-                </a>
-                
-                    <ul>
-                        <li><a href="">Pharmacie</a></li>
-                        <li><a href="">Rendez-vous</a></li>
-                        <li><a href="">Télé-consultations</a></li>
-                    </ul>
-
-                            <div class="connexion">
-                            <a href=""><em>connexion</em></a>
-                            </div>
+            <!-- LE logo -->
+            <a class="logo" href="index.html"><span class="Omni">Omni<span class="Soin">Soin</span>
+            </a>
+            <!-- LES LIEN DE NAVigation -->
+            <ul>
+                <li><a href="./Pharmacie.html">Pharmacie</a></li>
+                <li><a href="./Rendez-vous.html">Rendez-vous</a></li>
+                <li><a href="./Télé-consultations.html">Télé-consultations</a></li>
+            </ul>
+            <!-- BOUTON DE CONNEXION -->
+            <div class="connexion">
+                <a href="./form connexion.html"><em>connexion</em></a>
+            </div>
         </nav>
     </header>
+    <!-- FIN DU HEADER1 DEBUT DU HERO -->
+    <div class="hero1">
+        <h1><b>Obtient les meilleures consielle santé</b></h1>
+        <form action="" class="search">
+            <div>
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+            </div>
+            <input type="text" name="q" id="" placeholder="Pharmacie de garde, entrez votre position">
+        </form>
+    </div>
+    <!-- fin du hero debut du main -->
+    <main>
+        <!-- debut de la section5 -->
+        <section class="sect5">
+            <!-- partie titre -->
+            <h1>Téléconsultations</h1>
+            <div class="blct1">
+                <!-- partie div blanche texte -->
+                <h1>Symptome Quotidien</h1>
+            </div>
+            <div class="blct2">
+                <h1>Mal de tete</h1>
+                <div class="mal_tete"></div>
+                <p>Si vous avez mal a la tete cela peut etre due a du stress ou fatigue il pas necessaire de prendre du paracetamol juste un verre d eau et du repos si cela percistes consulter in medcin/pharmacien avant de prendre un medicament
+                </p>
+            </div>
+            <div class="blct3">
+                <h1>Mal de ventre</h1>
+                <div class="mal_ventre"></div>
+                <p>Un mal de ventre n est pas specifiquement due a une intoxication une movaise digection peut la coser ou une accumulation de matiere fecales ou la consomation trop fres ou pas assez cuit. Mais aussi a cause des ver. <br> Dans ce cas si
+                    vous vous etes pas deparasité depuis un moment prennez en un. essayer d aller au toilet si ca s aggrave consulter un medcin .</p>
+            </div>
+            <!-- fin DE LA SECT5 -->
+        </section>
+    </main>
+    <!-- fin du main de but du <footer></footer> -->
+    <footer>
+        <!-- la div qui contient tout les elements de gauche -->
+        <div class="BLOC">
+            <!-- LE logo -->
+            <a class="logo" href="index.html"><span class="Omni">Omni<span class="Soin">Soin</span>
+            </a>
+            <!-- la div qui contient l' icones et le mail -->
+            <div class="icon_envelop">
+                <a href="mailto:" target="_blank" ><svg width="30" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="15" width="90" height="60" rx="4" fill="#8CFF5C"/>
+                    <path d="M10 20L50 55L90 20" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <p>azizprince027@gmail.com </p>
+            </div>
+            <!-- la div qui contient l kicones telephone et le numerpo de telephone -->
+            <div class="icon_envelop">
+                <a href="tel:+225">
+                    <svg width="30" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9C16 14.8 15.6 14.9 15.3 15.2L13.1 17.4C10.3 15.9 8 13.7 6.5 10.9L8.7 8.7C9 8.4 9.1 8 9 7.6C8.7 6.5 8.5 5.2 8.5 4C8.5 3.5 8 3 7.5 3H4C3.5 3 3 3.5 3 4C3 13.4 10.6 21 20 21C20.5 21 21 20.5 21 20V16.5C21 16 20.5 15.5 20 15.5Z" fill="#8CFF5C"/>
+                    </svg>
+                </a>
+                <p>+225 05-06-55-26-26</p>
+            </div>
+            <!-- le petit paragraphe de descriptions du projet -->
+            <p><span class="description">Trouvez une  pharmacies <br> rapidement <br> Pour les cas extreme</span></p>
+        </div>
+        <!-- la div qui contient les  elkements du milieu dans le <footer></footer> -->
+        <div class="BLOC2">
+            <!-- le text de la div du milieu -->
+            <h1>Liens rapides</h1>
+            <!-- les Liens de redirection des digferents page -->
+            <a href="./Pharmacie.html">Pharmacies</a>
+            <a href="./Rendez-vous.html">Prendre rendez-vous</a>
+            <a href="./Télé-consultations.html">Téléconsultation</a>
+        </div>
+        <!-- la div qui contient  tout les elements de droites -->
+        <div class="BLOC3">
+            <!-- le text de l'elements de droites -->
+            <h1>Sociale</h1>
+            <!-- div qui contient les icones facebook et x  -->
+            <div class="icon_envelop">
+                <a href="https://x.com/?lang=fr" target="_blank">
+                    <svg width="30" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z" fill="#8CFF5C"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="icon_envelop">
+                <a href="https://www.facebook.com/?locale=fr_FR" target="_blank">
+                    <svg width="30" height="80" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.198 21.5h4v-8.01h3.205l.479-4h-3.684V6.932c0-1.159.322-1.948 1.982-1.948h2.119v-3.578c-.367-.048-1.626-.158-3.092-.158-3.059 0-5.152 1.867-5.152 5.295V9.49H6.32v4h2.878V21.5z" fill="#8CFF5C"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="oni"><p>© OmniSoin225/2026</p></div>
+        </div>
+        <!-- fin du <footer></footer> -->
+    </footer>
 </body>
 </html>

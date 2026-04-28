@@ -1,4 +1,4 @@
-    * {
+* {
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
@@ -23,6 +23,7 @@
         position: sticky;
         top: 0;
         z-index: 1000;
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.243);
     }
     /* partie des lien de navigations */
     
@@ -62,7 +63,7 @@
         flex-wrap: wrap;
         text-decoration: none;
         color: #333;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 600;
         transition: color 0.3s;
     }
@@ -171,7 +172,7 @@
             font-size: 2rem;
         }
     }
-    /* Desktop Standard (1024px et plus) */
+    /* Desktop Standard 1024px et plus */
     
     @media screen and (min-width: 1024px) {
         nav {
@@ -196,12 +197,714 @@
     @media screen and (min-width: 1440px) {
         nav {
             max-width: 1400px;
-            /* On empêche le menu de s'éparpiller trop loin */
+            /*  empêche le menu de s'éparpiller trop loin */
             margin: 0 auto;
             padding: 2rem 0;
         }
         .logo {
             font-size: 2.6rem;
-            /* On augmente la visibilité sur grand écran */
+            /*  augmente la visibilité sur grand écran */
         }
     }
+
+    /* hero1*/
+    
+    .hero1 {
+        width: auto;
+        background-image: linear-gradient(#0fa23e3a), url(./Images/trouver\ un\ medcin.png);
+        background-repeat: no-repeat;
+        /* 3. Centrer l'image horizontalement et verticalement */
+        background-position: center;
+        /* 4. COUVRIR toute la zone (La clé du responsive) */
+        background-size: cover;
+        /* 5. Fixer l'image ou la laisser défiler */
+        background-attachment: scroll;
+        /* 6. Hauteur minimale pour que l'image soit visible ossi pour les mobiles */
+        min-height: 100vh;
+        /* 7. Centrer le contenu par-dessus pour prendre la taille minimal 1vh =1% */
+        /* alignement des elements */
+        flex-direction: column;
+    }
+    /* partie qui contient le text et la search bar */
+    
+    .hero1 h1 {
+        color: #000000ef;
+        font-family: 'poppins';
+        font-weight: 400;
+        font-size: 3rem;
+        font-style: oblique;
+        /* partie du text et input deplacement */
+        padding-top: 11%;
+        padding-left: 13%;
+    }
+    /* le search c est le formulaire  */
+    
+    .search {
+        width: 100%;
+        max-width: 50rem;
+        background-color: #1790DC;
+        border-radius: 0.8rem;
+        padding: 1rem 2rem;
+        margin-left: 13%;
+        margin-top: 2%;
+        display: flex;
+        align-items: center;
+        gap: 4%;
+    }
+    /* le svg voila ca  */
+    
+    .search-icon {
+        width: 2rem;
+        height: 2rem;
+        color: #ffffff;
+        flex-shrink: 0;
+    }
+    
+    .search input {
+        background: transparent;
+        border: none;
+        flex: 1;
+        outline: none;
+        font-size: 2rem;
+        color: #ffffff;
+    }
+    /* fin dela partie .hero1 */
+    /* ::placeholder {
+    color: #1790DC; POUR LA  couleur du texte saisi
+} */
+    /*  RESPONSIVE  POur les tel telé pc et bureau
+  */
+    /* 1. TÉLÉVISION / ULTRA-WIDE)
+   l'affichage pour les très grands écrans > 1920px */
+    
+    @media screen and (min-width: 1921px) {
+        .hero1 h1 {
+            font-size: 5rem;
+            padding-top: 150px;
+        }
+        .search {
+            max-width: 70rem;
+            padding: 1.5rem 3rem;
+        }
+    }
+    /* 2. DESKTOP STANDARD  */
+    
+    @media screen and (max-width: 1400px) {
+        .hero1 h1 {
+            font-size: 3.5rem;
+        }
+    }
+    /* 3. TABLETTE Entre 768px et 1024px */
+    
+    @media screen and (max-width: 1024px) {
+        .hero1 {
+            display: flex;
+            align-items: center;
+            /*  centre tout horizontalement */
+            justify-content: center;
+            /* centre verticalement */
+        }
+        .hero1 h1 {
+            padding-left: 0;
+            /*  annule le 13% que j ai mis pour bouger les  text /input */
+            padding-top: 0;
+            text-align: center;
+            font-size: 2.8rem;
+            width: 90%;
+        }
+        .search {
+            margin-left: 0;
+            /*  annule ton 13% */
+            margin-top: 2rem;
+            width: 80%;
+        }
+    }
+    /* 4. MOBILE Moins de 767px */
+    
+    @media screen and (max-width: 767px) {
+        .hero1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .hero1 h1 {
+            padding-left: 0;
+            padding-top: 0;
+            text-align: center;
+            font-size: 1.8rem;
+            /* Taille lisible sur les lalé */
+            line-height: 1.2;
+        }
+        /*  saut de ligne sur tel pour éviter les textes brisés */
+        .hero1 h1 br {
+            display: none;
+        }
+        .search {
+            margin-left: 0;
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            gap: 10px;
+        }
+        .search input {
+            font-size: 1.1rem;
+            /*  évite le zoom auto sur iPhone font < 16px*/
+        }
+        .search-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    /* debut du main */
+    /* fin de la responsive et debut de la sect4 */
+    
+    .sect4 {
+        height: auto;
+        width: 100%;
+    }
+    
+    .sect4 h1 {
+        text-align: center;
+        text-decoration: underline;
+        font-family: 'poppins';
+        font-weight: bolder;
+        font-style: italic;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        font-size: 3rem;
+    }
+    /*div qui contient le form et les autres elements*/
+    
+    .Blcm {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 4rem;
+        padding: 3%;
+    }
+    /* le formulairee  */
+    
+    .bar_info {
+        height: 8rem;
+        width: 50%;
+        border-radius: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 0 2rem #00000074;
+    }
+    /* les 2 premier input */
+    
+    .bar_info input {
+        height: 5rem;
+        margin-left: 2%;
+        border-radius: 1rem;
+        padding-left: 2%;
+        font-size: 1.5rem;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        appearance: none;
+        /* Supprime la flèche petanque par défaut */
+        -webkit-appearance: none;
+    }
+    /* le dernier input */
+    
+    .bar_info select {
+        height: 5rem;
+        border-radius: 1rem;
+        padding-left: 2%;
+        font-size: 1.5rem;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        appearance: none;
+        /* Supprime la flèche moche par défaut */
+        -webkit-appearance: none;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23666" d="M7 10l5 5 5-5z"/></svg>');
+        /* Ajoute une flèche stylée */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 15px;
+        padding-right: 30px;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    /* le boutton */
+    
+    .btn-submit {
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 1%;
+        margin-left: 1%;
+        font-size: 1.5rem;
+        background-image: linear-gradient(to right, #07fafea9 0%, #1790DC 51%, #001eff 100%);
+        display: inline-block;
+        background-size: 200% auto;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 0.8rem;
+        transition: 0.5s;
+        text-align: center;
+    }
+    /* la petite bar */
+    
+    hr {
+        height: 50%;
+    }
+    /* partie des transition :hover */
+    
+    .btn-submit:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-position: right center;
+        transform: translateY(-2px);
+    }
+    
+    .bar_info input:hover {
+        box-shadow: 0 0 1rem #00000074;
+    }
+    
+    .bar_info select:hover {
+        box-shadow: 0 0 1rem #00000074;
+    }
+    /* responsive de  la bar de filtre */
+    /* 1. MOBILE Téléphones - Moins de 768px */
+    
+    @media screen and (max-width: 767px) {
+        .bar_info {
+            width: 90%;
+            height: auto;
+            /*  laisse la hauteur s'adapter au contenu */
+            flex-direction: column;
+            padding: 20px;
+            gap: 15px;
+        }
+        .bar_info input,
+        .bar_info select,
+        .btn-submit {
+            width: 100%;
+            /* Tout le gbonhi prend la largeur totale */
+            margin: 0;
+            height: 4rem;
+        }
+        hr {
+            width: 100%;
+            /* La barre devient horizontale sur mobile */
+            height: 1px;
+            border: 0.1px solid #eee;
+        }
+        .sect4 h1 {
+            font-size: 2rem;
+            /* On réduit le titre pour éviter les coupures */
+        }
+    }
+    /* 2. TABLETTE 768px à 1024px */
+    
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .bar_info {
+            width: 80%;
+            height: 7rem;
+        }
+        .bar_info input,
+        .bar_info select {
+            font-size: 1.2rem;
+        }
+    }
+    /* 3. DESKTOP / PC STANDARD  */
+    
+    @media screen and (min-width: 1025px) {
+        .bar_info {
+            width: 60%;
+            /* 50% c'était un peu serré pour 3 champs + bouton */
+        }
+    }
+    /* 4. GRANDS ÉCRANS PC / TÉLÉVISION (Plus de 1920px) */
+    
+    @media screen and (min-width: 1921px) {
+        .bar_info {
+            width: 40%;
+            /* On resserre pour ne pas que ça fasse trop "étiré" */
+            height: 10rem;
+        }
+        .sect4 h1 {
+            font-size: 5rem;
+        }
+    }
+    /* partie qui connait les div blanche */
+    
+    .medcin {
+        height: 13.7rem;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 0 1.2rem;
+        justify-content: space-around;
+        width: 100%;
+    }
+    /* la div qui contient l images */
+    
+    .med1 {
+        height: 12rem;
+        width: 9%;
+        margin-left: 2%;
+        background-image: url(./Images/keline\ Dr.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 1rem 2rem 2rem 1rem;
+        box-shadow: 0 0 1.2rem #BDFFF3;
+    }
+    
+    .med3 {
+        height: 12rem;
+        width: 9%;
+        margin-left: 2%;
+        background-image: url(./Images/Zebi.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 1rem 2rem 2rem 1rem;
+        box-shadow: 0 0 1.2rem #BDFFF3;
+    }
+    
+    .med4 {
+        height: 12rem;
+        width: 9%;
+        margin-left: 2%;
+        background-image: url(./Images/Mouna.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 1rem 2rem 2rem 1rem;
+        box-shadow: 0 0 1.2rem #4AC29A;
+    }
+    /* la div qui contient  tout les elemntx texte  et autre a coté de l' images */
+    
+    .med2 {
+        height: 10rem;
+        width: 87%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /* parti des textes  */
+    
+    .med2 h1,
+    .med2 p {
+        text-decoration: none;
+        font-family: 'poppins';
+        font-size: 2.3rem;
+    }
+    /* parties du boutons de rcherche */
+    
+    .prendre_rendezvous {
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 2%;
+        font-size: 1.5rem;
+        background-image: linear-gradient(to right, #214933a9 0%, #1790DC 51%, #4AC29A 100%);
+        display: inline-block;
+        background-size: 200% auto;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 0.8rem;
+        transition: 0.5s;
+        text-align: center;
+    }
+    /* parties du lien de boutons de recherche */
+    
+    .prendre_rendezvous a {
+        text-decoration: none;
+        color: #fff;
+    }
+    /* les transision hover du site  */
+    
+    .prendre_rendezvous:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+        background-position: right center;
+        transform: translateY(-2px);
+    }
+    /* fin de la section 4 */
+    /* responsive de la partie prises de rendez vous */
+    /* 1. tel - max 600px */
+    
+    @media screen and (max-width: 600px) {
+        .medcin {
+            height: auto;
+            /*  on laisse le contenue plané */
+            flex-direction: column;
+            padding: 1.5rem 0;
+        }
+        .med1,
+        .med3,
+        .med4 {
+            width: 12rem;
+            /* Image bien soigné et centrée */
+            height: 12rem;
+            margin-left: 0;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            /*images  rond */
+        }
+        .med2 {
+            width: 90%;
+            height: auto;
+            flex-direction: column;
+            text-align: center;
+        }
+        .med2 h1,
+        .med2 p {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .prendre_rendezvous {
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 0.8rem;
+        }
+    }
+    /* 2. TABLETTES 601px à 1024px */
+    
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+        .med1,
+        .med3,
+        .med4 {
+            width: 15%;
+            /*  élargit l'image  */
+        }
+        .med2 {
+            width: 80%;
+        }
+        .med2 h1,
+        .med2 p {
+            font-size: 1.8rem;
+        }
+    }
+    /* 3. ÉCRANS LARGES & TV  1920px */
+    
+    @media screen and (min-width: 1921px) {
+        .medcin {
+            height: 18rem;
+            /* grand pour ien voir */
+            max-width: 1600px;
+            margin: 2rem auto;
+        }
+        .med2 h1,
+        .med2 p {
+            font-size: 3rem;
+            /* Texte massif pour lecture à distance */
+        }
+        .prendre_rendezvous {
+            transform: scale(1.2);
+            /* gros bouton */
+        }
+    }
+    /* fin de la responsive et debut de la sect5*/
+    footer {
+    height: auto;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    background-color: #0E3A45;
+
+}
+/* le  bloc de tout les elements de gauche */
+.BLOC {
+    height: auto;
+    width: 30%;
+    padding: 1.2rem 2rem;
+}
+/* la div quui cointient les icones  */
+.icon_envelop{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+/* j ai ciblé les svg */
+.icon_envelop svg {
+    height: 4rem;
+    width: 4rem;
+}
+/* j ai ciblé les p ratacher au different   p */
+.icon_envelop p {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.4rem;
+}
+/* le petit paragraphe de fin c est un span que j ai ajouté */
+.description {
+    color: #50DD8F;
+}
+/* le bloc du milieu */
+.BLOC2 {
+    height: auto;
+    width: 30%;
+    padding: 1.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/* le titre du bloc du milieu */
+.BLOC2 h1 {
+    font-family: 'poppins';
+    font-style: italic;
+    font-weight: bolder;
+    color: #fff;
+}
+/* les lien du bloc du milieu */
+.BLOC2 a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'poppins';
+    color: #1790DC;
+}
+/* bloc de fin */
+.BLOC3 {
+    height: auto;
+    width: 28%;
+    padding: 1.2rem 2rem;
+    padding-left: 5%;
+    padding-bottom: 4%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
+/* le texte du bloc de fin  */
+.BLOC3 h1 {
+    font-size: 1.8rem;
+    font-family: 'poppins';
+    font-weight: bolder;
+    font-style: italic;
+    color: #fff;
+}
+
+/* partie des transitions hover */
+
+.BLOC2 a:hover {
+    color: #4AC29A;
+}
+/* partie du (c) */
+.oni p {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bolder;
+    font-weight: 300;
+}
+/* fin du code */
+/* dbut de la responsive */
+
+/* 1. TABLETTE */
+@media screen and (max-width: 1024px) {
+    footer {
+        padding: 5%;
+    }
+    
+    .BLOC, .BLOC2, .BLOC3 {
+        width: 45%; /* deux colonnes pour éviter l'écrasement */
+        padding: 1rem;
+    }
+
+    .BLOC3 {
+        width: 100%; /* Le bloc social prend la largeur en bas */
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* 2. MOBILE Smartphones */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack vertical obligatoire */
+        align-items: center;
+        text-align: center;
+    }
+
+    .BLOC, .BLOC2, .BLOC3 {
+        width: 100%; /* Chaque bloc prend toute la place */
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Séparation légère */
+    }
+
+    .BLOC3 {
+        border-bottom: none;
+    }
+
+    .icon_envelop {
+        justify-content: center; /* Centrage des icônes sur mobile */
+        margin-bottom: 10px;
+    }
+
+    .icon_envelop p {
+        font-size: 1.1rem; /*  réduit la taille pour éviter les retours à la ligne bete bete */
+    }
+
+    .BLOC2 a {
+        font-size: 1.4rem;
+        margin: 8px 0;
+    }
+    
+    .icon_envelop svg {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+/* 3. PETIT MOBILE  */
+@media screen and (max-width: 480px) {
+    .icon_envelop p {
+        font-size: 0.9rem;
+    }
+
+    .BLOC2 h1, .BLOC3 h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 4. TÉLÉVISION  */
+@media screen and (min-width: 1921px) {
+    footer {
+        padding: 2% 15%; /*  augmente les marges latérales pour centrer le contenu */
+    }
+
+    .BLOC, .BLOC2, .BLOC3 {
+        max-width: 500px;
+    }
+
+    .icon_envelop p {
+        font-size: 1.8rem; /*scale vers le haut pour la visibilité de loin */
+    }
+
+    .BLOC2 a {
+        font-size: 2.2rem;
+    }
+}
