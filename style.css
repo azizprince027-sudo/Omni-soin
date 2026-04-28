@@ -1325,3 +1325,90 @@ footer {
     font-weight: 300;
 }
 /* fin du code */
+/* dbut de la responsive */
+
+/* 1. TABLETTE */
+@media screen and (max-width: 1024px) {
+    footer {
+        padding: 5%;
+    }
+    
+    .BLOC, .BLOC2, .BLOC3 {
+        width: 45%; /* deux colonnes pour éviter l'écrasement */
+        padding: 1rem;
+    }
+
+    .BLOC3 {
+        width: 100%; /* Le bloc social prend la largeur en bas */
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* 2. MOBILE Smartphones */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack vertical obligatoire */
+        align-items: center;
+        text-align: center;
+    }
+
+    .BLOC, .BLOC2, .BLOC3 {
+        width: 100%; /* Chaque bloc prend toute la place */
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Séparation légère */
+    }
+
+    .BLOC3 {
+        border-bottom: none;
+    }
+
+    .icon_envelop {
+        justify-content: center; /* Centrage des icônes sur mobile */
+        margin-bottom: 10px;
+    }
+
+    .icon_envelop p {
+        font-size: 1.1rem; /*  réduit la taille pour éviter les retours à la ligne bete bete */
+    }
+
+    .BLOC2 a {
+        font-size: 1.4rem;
+        margin: 8px 0;
+    }
+    
+    .icon_envelop svg {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+/* 3. PETIT MOBILE  */
+@media screen and (max-width: 480px) {
+    .icon_envelop p {
+        font-size: 0.9rem;
+    }
+
+    .BLOC2 h1, .BLOC3 h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 4. TÉLÉVISION  */
+@media screen and (min-width: 1921px) {
+    footer {
+        padding: 2% 15%; /*  augmente les marges latérales pour centrer le contenu */
+    }
+
+    .BLOC, .BLOC2, .BLOC3 {
+        max-width: 500px;
+    }
+
+    .icon_envelop p {
+        font-size: 1.8rem; /*scale vers le haut pour la visibilité de loin */
+    }
+
+    .BLOC2 a {
+        font-size: 2.2rem;
+    }
+}
