@@ -236,41 +236,17 @@
         padding-top: 11%;
         padding-left: 13%;
     }
-    /* le search c est le formulaire  */
     
-    .search {
-        width: 100%;
-        max-width: 50rem;
-        background-color: #fff;
-        border-radius: 0.8rem;
-        padding: 1rem 2rem;
-        margin-left: 13%;
-        margin-top: 2%;
-        display: flex;
-        align-items: center;
-        gap: 4%;
-    }
-    /* le svg voila ca  */
-    
-    .search-icon {
-        width: 2rem;
-        height: 2rem;
-        color: #888;
-        flex-shrink: 0;
+    .hero1 p {
+        font-size: 1.8rem;
+        font-family: "poppins";
+        font-style: oblique;
+        color: #E4EEF0;
+        padding-top: 2%;
+        padding-left: 13%;
     }
     
-    .search input {
-        background: transparent;
-        border: none;
-        flex: 1;
-        outline: none;
-        font-size: 2rem;
-        color: #07141088;
-    }
-    /* fin dela partie .hero1 */
-    /* ::placeholder {
-    color: #1790DC; POUR LA  couleur du texte saisi
-} */
+    
     /*  RESPONSIVE  POur les tel telé pc et bureau
   */
     /* 1. TÉLÉVISION / ULTRA-WIDE)
@@ -311,12 +287,7 @@
             font-size: 2.8rem;
             width: 90%;
         }
-        .search {
-            margin-left: 0;
-            /*  annule ton 13% */
-            margin-top: 2rem;
-            width: 80%;
-        }
+        
     }
     /* 4. MOBILE Moins de 767px */
     
@@ -339,19 +310,5 @@
         .hero1 h1 br {
             display: none;
         }
-        .search {
-            margin-left: 0;
-            margin-top: 1.5rem;
-            width: 100%;
-            padding: 0.8rem 1.2rem;
-            gap: 10px;
-        }
-        .search input {
-            font-size: 1.1rem;
-            /*  évite le zoom auto sur iPhone font < 16px*/
-        }
-        .search-icon {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
+        
     }
