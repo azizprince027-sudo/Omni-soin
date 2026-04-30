@@ -1164,7 +1164,7 @@
     .blct2:hover, .blct3:hover {
     transform: translateY(-3rem); 
     box-shadow: 0 0  2rem 3rem rgba(0, 0, 0, 0.1); /* L'ombre s'accentue */
-    border: 1rem solid #000000; 
+    border: 1rem solid #1790DC; 
     border-radius: 2rem;
 }
     /*
@@ -1230,7 +1230,6 @@
 
 footer {
     height: auto;
-    border: 2px solid black;
     display: flex;
     justify-content: space-between;
     padding: 3%;

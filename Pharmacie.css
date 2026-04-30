@@ -1,4 +1,4 @@
-    * {
+* {
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
@@ -23,6 +23,7 @@
         position: sticky;
         top: 0;
         z-index: 1000;
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.243);
     }
     /* partie des lien de navigations */
     
@@ -62,7 +63,7 @@
         flex-wrap: wrap;
         text-decoration: none;
         color: #333;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 600;
         transition: color 0.3s;
     }
@@ -171,7 +172,7 @@
             font-size: 2rem;
         }
     }
-    /* Desktop Standard (1024px et plus) */
+    /* Desktop Standard 1024px et plus */
     
     @media screen and (min-width: 1024px) {
         nav {
@@ -196,12 +197,161 @@
     @media screen and (min-width: 1440px) {
         nav {
             max-width: 1400px;
-            /* On empêche le menu de s'éparpiller trop loin */
+            /*  empêche le menu de s'éparpiller trop loin */
             margin: 0 auto;
             padding: 2rem 0;
         }
         .logo {
             font-size: 2.6rem;
-            /* On augmente la visibilité sur grand écran */
+            /*  augmente la visibilité sur grand écran */
+        }
+
+    }
+    
+    .hero1 {
+        width: auto;
+        background-image: linear-gradient(to right, #000000e3,#ffffff00), url(./Images/hero\ de\ pharmacie.png);
+        background-repeat: no-repeat;
+        /* 3. Centrer l'image horizontalement et verticalement */
+        background-position: center;
+        /* 4. COUVRIR toute la zone (La clé du responsive) */
+        background-size: cover;
+        /* 5. Fixer l'image ou la laisser défiler */
+        background-attachment: scroll;
+        /* 6. Hauteur minimale pour que l'image soit visible ossi pour les mobiles */
+        min-height: 100vh;
+        /* 7. Centrer le contenu par-dessus pour prendre la taille minimal 1vh =1% */
+        /* alignement des elements */
+        flex-direction: column;
+    }
+    /* partie qui contient le text et la search bar */
+    
+    .hero1 h1 {
+        color: #ffffffef;
+        font-family: 'poppins';
+        font-weight: 400;
+        font-size: 3rem;
+        font-style: oblique;
+        /* partie du text et input deplacement */
+        padding-top: 11%;
+        padding-left: 13%;
+    }
+    /* le search c est le formulaire  */
+    
+    .search {
+        width: 100%;
+        max-width: 50rem;
+        background-color: #fff;
+        border-radius: 0.8rem;
+        padding: 1rem 2rem;
+        margin-left: 13%;
+        margin-top: 2%;
+        display: flex;
+        align-items: center;
+        gap: 4%;
+    }
+    /* le svg voila ca  */
+    
+    .search-icon {
+        width: 2rem;
+        height: 2rem;
+        color: #888;
+        flex-shrink: 0;
+    }
+    
+    .search input {
+        background: transparent;
+        border: none;
+        flex: 1;
+        outline: none;
+        font-size: 2rem;
+        color: #07141088;
+    }
+    /* fin dela partie .hero1 */
+    /* ::placeholder {
+    color: #1790DC; POUR LA  couleur du texte saisi
+} */
+    /*  RESPONSIVE  POur les tel telé pc et bureau
+  */
+    /* 1. TÉLÉVISION / ULTRA-WIDE)
+   l'affichage pour les très grands écrans > 1920px */
+    
+    @media screen and (min-width: 1921px) {
+        .hero1 h1 {
+            font-size: 5rem;
+            padding-top: 150px;
+        }
+        .search {
+            max-width: 70rem;
+            padding: 1.5rem 3rem;
+        }
+    }
+    /* 2. DESKTOP STANDARD  */
+    
+    @media screen and (max-width: 1400px) {
+        .hero1 h1 {
+            font-size: 3.5rem;
+        }
+    }
+    /* 3. TABLETTE Entre 768px et 1024px */
+    
+    @media screen and (max-width: 1024px) {
+        .hero1 {
+            display: flex;
+            align-items: center;
+            /*  centre tout horizontalement */
+            justify-content: center;
+            /* centre verticalement */
+        }
+        .hero1 h1 {
+            padding-left: 0;
+            /*  annule le 13% que j ai mis pour bouger les  text /input */
+            padding-top: 0;
+            text-align: center;
+            font-size: 2.8rem;
+            width: 90%;
+        }
+        .search {
+            margin-left: 0;
+            /*  annule ton 13% */
+            margin-top: 2rem;
+            width: 80%;
+        }
+    }
+    /* 4. MOBILE Moins de 767px */
+    
+    @media screen and (max-width: 767px) {
+        .hero1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .hero1 h1 {
+            padding-left: 0;
+            padding-top: 0;
+            text-align: center;
+            font-size: 1.8rem;
+            /* Taille lisible sur les lalé */
+            line-height: 1.2;
+        }
+        /*  saut de ligne sur tel pour éviter les textes brisés */
+        .hero1 h1 br {
+            display: none;
+        }
+        .search {
+            margin-left: 0;
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            gap: 10px;
+        }
+        .search input {
+            font-size: 1.1rem;
+            /*  évite le zoom auto sur iPhone font < 16px*/
+        }
+        .search-icon {
+            width: 1.5rem;
+            height: 1.5rem;
         }
     }

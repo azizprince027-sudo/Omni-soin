@@ -211,7 +211,7 @@
     
     .hero1 {
         width: auto;
-        background-image: linear-gradient(#0fa23e3a), url(./Images/trouver\ un\ medcin.png);
+        background-image: linear-gradient( to right , #4ac29ad8, #0fa23e00), url(./Images/trouver\ un\ medcin.png);
         background-repeat: no-repeat;
         /* 3. Centrer l'image horizontalement et verticalement */
         background-position: center;
@@ -228,7 +228,7 @@
     /* partie qui contient le text et la search bar */
     
     .hero1 h1 {
-        color: #000000ef;
+        color: #ffffffb5;
         font-family: 'poppins';
         font-weight: 400;
         font-size: 3rem;
@@ -268,10 +268,11 @@
         font-size: 2rem;
         color: #ffffff;
     }
+    .search :hover {
+        box-shadow: 0 0 3rem white;
+    }
     /* fin dela partie .hero1 */
-    /* ::placeholder {
-    color: #1790DC; POUR LA  couleur du texte saisi
-} */
+    
     /*  RESPONSIVE  POur les tel telé pc et bureau
   */
     /* 1. TÉLÉVISION / ULTRA-WIDE)
@@ -646,7 +647,6 @@
         background-position: right center;
         color: #fff;
         text-decoration: none;
-        background-position: right center;
         transform: translateY(-2px);
     }
     /* fin de la section 4 */
@@ -727,7 +727,6 @@
     /* fin de la responsive et debut de la sect5*/
     footer {
     height: auto;
-    border: 2px solid black;
     display: flex;
     justify-content: space-between;
     padding: 3%;
