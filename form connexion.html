@@ -1,91 +1,50 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface Pharmacie</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Pour les icônes (loupe, check, croix) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Omni Soin</title>
+    <link rel="stylesheet" href="form connexion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
 </head>
 
 <body>
-
-    <div class="container">
-        <!-- Barre de recherche -->
-        <header class="search-bar">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Recherchez un medicament">
+    <div class="login-container">
+        <header class="login-header">
+            <!-- LE logo -->
+            <a class="logo" href="index.html"><span class="Omni">Omni<span class="Soin">Soin</span>
+            </a>
         </header>
 
-        <main class="content">
-            <!-- Liste des pharmacies -->
-            <section class="pharmacy-list">
+        <div class="login-card">
+            <h2>Connexion</h2>
 
-                <!-- Carte 1 -->
-                <div class="card">
-                    <div class="card-left">
-                        <div class="icon-box">
-                            <img src="https://cdn-icons-png.flaticon.com/512/883/883360.png" alt="icon">
-                        </div>
-                        <div class="info">
-                            <h3>Pharmacie du plateau</h3>
-                            <p><span class="status">Ouvert</span> - ferme 22h</p>
-                        </div>
-                    </div>
-                    <div class="card-right">
-                        <span class="distance">300m</span>
-                        <span class="med-status">Pracetamol <i class="fas fa-check"></i></span>
-                    </div>
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
                 </div>
 
-                <!-- Carte 2 -->
-                <div class="card">
-                    <div class="card-left">
-                        <div class="icon-box">
-                            <img src="https://cdn-icons-png.flaticon.com/512/883/883360.png" alt="icon">
-                        </div>
-                        <div class="info">
-                            <h3>Pharmacie Jehova</h3>
-                            <p><span class="status">Ouvert</span> - ferme 20h</p>
-                        </div>
-                    </div>
-                    <div class="card-right">
-                        <span class="distance">1km</span>
-                        <span class="med-status out">Tramadole <i class="fas fa-times"></i></span>
-                    </div>
+                <div class="input-group">
+                    <label for="password">Mots de passse</label>
+                    <input type="password" id="password" required>
                 </div>
 
-                <!-- Carte 3 -->
-                <div class="card">
-                    <div class="card-left">
-                        <div class="icon-box">
-                            <img src="https://cdn-icons-png.flaticon.com/512/883/883360.png" alt="icon">
-                        </div>
-                        <div class="info">
-                            <h3>Pharmacie st ANE</h3>
-                            <p><span class="status">Ouvert</span> - ferme 21h</p>
-                        </div>
-                    </div>
-                    <div class="card-right">
-                        <span class="distance">2km</span>
-                        <span class="med-status">insulinne <i class="fas fa-check"></i></span>
-                    </div>
-                </div>
+                <a href="mots de passe oublié.html" class="forgot-link">Mots de passe oublié?</a>
 
-            </section>
+                <button type="submit" class="btn btn-login">Connexion</button>
 
-            <!-- Section Carte/Map -->
-            <aside class="map-container">
-                <div class="map-placeholder">
-                    <!-- Image de remplacement pour la carte -->
-                    <img src="https://via.placeholder.com/200x400" alt="Carte">
-                </div>
-            </aside>
-        </main>
+                <button type="button" class="btn btn-google">
+                <i class="fa-brands fa-google"></i> Connexion avec google
+            </button>
+            </form>
+
+            <a href="./form inscription.html" class="signup-link">S' inscrire en tant que medcin</a>
+        </div>
     </div>
-
+    <script src="form connexion.js"></script>
 </body>
 
 </html>

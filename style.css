@@ -210,7 +210,7 @@
     
     .hero1 {
         width: auto;
-        background-image: linear-gradient(#0f6fa23a), url(./Images/hero1.png);
+        background-image: linear-gradient(to right, #1791dc9f, #1791dc00), url(./Images/hero1.png);
         background-repeat: no-repeat;
         /* 3. Centrer l'image horizontalement et verticalement */
         background-position: center;

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniSoin - Prise de RDV Professionnelle</title>
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./prises_rendezvous.css">
+
+</head>
+
+<body>
+    <div class="booking-container">
+        <!-- Barre de disponibilité -->
+        <div class="availability-dropdown" id="availabilityBox">
+            <div class="status-header">
+                <span id="todayLabel">Chargement...</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="weekly-schedule" id="weeklyList">
+                <!-- Rempli par JS -->
+            </div>
+        </div>
+        <!-- Carte de réservation -->
+        <div class="booking-card">
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <button class="nav-btn" onclick="moveMonth(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="current-month" id="monthDisplay">Avril 2026</div>
+                    <button class="nav-btn" onclick="moveMonth(1)"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid" id="gridDisplay">
+                    <!-- Rempli par JS -->
+                </div>
+            </div>
+            <div class="confirmation-section">
+                <a href="./index.html">
+                    <h1 class="logo">Omni<span>Soin</span></h1>
+                </a>
+                <button class="confirm-btn" id="btnConfirm">Confirmé le rendez vous?</button>
+            </div>
+        </div>
+    </div>
+    <script src="./prises_rendezvous.js"></script>
+</body>
+
+</html>
