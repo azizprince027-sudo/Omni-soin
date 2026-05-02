@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -32,9 +34,127 @@
     <!-- FIN DU HEADER1 DEBUT DU HERO -->
     <div class="hero1">
         <h1><b>Trouvez rapidement un </b><br> <b>soin adapté près de chez vous</b></h1>
-            <p>Localisez les pharmacies ouvertes <br>
-            vérifiez la disponibilité des medicaments rapidement </p>
+        <p>Localisez les pharmacies ouvertes <br> vérifiez la disponibilité des medicaments rapidement </p>
     </div>
     <!-- fin du hero debut du main -->
+    <main>
+        <!-- la bar de recherche des medicament -->
+        <section class="bar_de_recherche">
+            <form action="" class="search">
+                <div>
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                </div>
+                <input type="text" name="q" id="" placeholder="Recherchez un medicament">
+            </form>
+        </section>
+        <!-- Fin de la bar de recherche des medicament -->
+        <!-- la grandes div qui contient les medicament et la carte -->
+        <section class="les_medicament_plus_carte">
+            <!-- div qui contient la grande div blanche -->
+            <div class="Ct1">
+                <div class="ph">
+                    <div class="ph1"></div>
+                    <div class="ph2">
+                        <h1><b>Pharmacie du plateau</b> <br>
+                            <p><span class="dispo">Ouvert</span> - <span class="heur">ferme</span> 22H</p>
+                        </h1>
+                        <p>300m paracetamol <i class="fa-solid fa-check" style="color: rgb(99, 230, 190);"></i></p>
+                    </div>
+                </div>
+                <div class="ph">
+                    <!-- ph est la grande div blanche qui contient les info -->
+                    <div class="ph1"></div>
+                    <!-- ph1 div qui contient  l image s de Pharmacie -->
+                    <div class="ph2">
+                        <!-- ph2 est la div qi contient les autres elemnts -->
+                        <h1><b>Pharmacie du Jehova</b> <br>
+                            <p><span class="dispo">Ouvert</span> - <span class="heur">ferme</span> 20H</p>
+                        </h1>
+                        <p>1km Tramadole <i class="fa-solid fa-xmark" style="color: rgb(198, 52, 52);"></i></p>
+                    </div>
+                </div>
+                <div class="ph">
+                    <!-- ph est la grande div blanche qui contient les info -->
+                    <div class="ph1"></div>
+                    <!-- ph1 div qui contient  l image s de Pharmacie  -->
+                    <div class="ph2">
+                        <!-- ph2 est la div qi contient les autres elemnts -->
+                        <h1><b>Pharmacie st ANE</b> <br>
+                            <p><span class="dispo">Ouvert</span> - <span class="heur">ferme</span> 21H</p>
+                        </h1>
+                        <p>5km Insulinne <i class="fa-solid fa-check" style="color: rgb(99, 230, 190);"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="Ct2"></div>
+        </section>
+    </main>
+    <!-- fin du <main></main> -->
+    <!-- fin du main de but du <footer></footer> -->
+    <footer>
+        <!-- la div qui contient tout les elements de gauche -->
+        <div class="BLOC">
+            <!-- LE logo -->
+            <a class="logo" href="index.html"><span class="Omni">Omni<span class="Soin">Soin</span>
+            </a>
+            <!-- la div qui contient l' icones et le mail -->
+            <div class="icon_envelop">
+                <a href="mailto:" target="_blank"><svg width="30" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="15" width="90" height="60" rx="4" fill="#8CFF5C"/>
+                    <path d="M10 20L50 55L90 20" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <p>azizprince027@gmail.com </p>
+            </div>
+            <!-- la div qui contient l kicones telephone et le numerpo de telephone -->
+            <div class="icon_envelop">
+                <a href="tel:+225 05 06 55 26 26 ">
+                    <svg width="30" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 15.5C18.8 15.5 17.5 15.3 16.4 14.9C16 14.8 15.6 14.9 15.3 15.2L13.1 17.4C10.3 15.9 8 13.7 6.5 10.9L8.7 8.7C9 8.4 9.1 8 9 7.6C8.7 6.5 8.5 5.2 8.5 4C8.5 3.5 8 3 7.5 3H4C3.5 3 3 3.5 3 4C3 13.4 10.6 21 20 21C20.5 21 21 20.5 21 20V16.5C21 16 20.5 15.5 20 15.5Z" fill="#8CFF5C"/>
+                    </svg>
+                </a>
+                <p>+225 05-06-55-26-26</p>
+            </div>
+            <!-- le petit paragraphe de descriptions du projet -->
+            <p><span class="description">Trouvez une  pharmacies <br> rapidement <br> Pour les cas extreme</span></p>
+        </div>
+        <!-- la div qui contient les  elkements du milieu dans le <footer></footer> -->
+        <div class="BLOC2">
+            <!-- le text de la div du milieu -->
+            <h1>Liens rapides</h1>
+            <!-- les Liens de redirection des digferents page -->
+            <a href="./Pharmacie.html">Pharmacies</a>
+            <a href="./Rendez-vous.html">Prendre rendez-vous</a>
+            <a href="./Télé-consultations.html">Téléconsultation</a>
+        </div>
+        <!-- la div qui contient  tout les elements de droites -->
+        <div class="BLOC3">
+            <!-- le text de l'elements de droites -->
+            <h1>Sociale</h1>
+            <!-- div qui contient les icones facebook et x  -->
+            <div class="icon_envelop">
+                <a href="https://x.com/?lang=fr" target="_blank">
+                    <svg width="30" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.494h2.039L6.486 3.24H4.298l13.311 17.407z" fill="#8CFF5C"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="icon_envelop">
+                <a href="https://www.facebook.com/?locale=fr_FR" target="_blank">
+                    <svg width="30" height="80" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.198 21.5h4v-8.01h3.205l.479-4h-3.684V6.932c0-1.159.322-1.948 1.982-1.948h2.119v-3.578c-.367-.048-1.626-.158-3.092-.158-3.059 0-5.152 1.867-5.152 5.295V9.49H6.32v4h2.878V21.5z" fill="#8CFF5C"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="oni">
+                <p>© OmniSoin225/2026</p>
+            </div>
+        </div>
+        <!-- fin du <footer></footer> -->
+    </footer>
 </body>
+
 </html>

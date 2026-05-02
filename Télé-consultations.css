@@ -1,530 +1,603 @@
 * {
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-    }
-    
-    html {
-        /* On ramène la base à 10px (62.5% de 16px)  POur utiliser le rem*/
-        font-size: 62.5%;
-    }
-    
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #E4EEF0;
-    }
-    
-    header {
-        height: auto;
-        width: auto;
-        background-color: #fff;
-        flex-wrap: wrap;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.243);
-    }
-    /* partie des lien de navigations */
-    
-    nav ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding-left: 2%;
-        padding-right: 3%;
-        list-style: none;
-        gap: 2rem;
-    }
-    
-    .logo {
-        text-decoration: none;
-        font-size: 2.2rem;
-        font-weight: 700;
-        font-style: italic;
-    }
-    
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    /* On ramène la base à 10px (62.5% de 16px)  POur utiliser le rem*/
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E4EEF0;
+}
+
+header {
+    height: auto;
+    width: auto;
+    background-color: #fff;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.243);
+}
+
+
+/* partie des lien de navigations */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 3%;
+    list-style: none;
+    gap: 2rem;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+
+/* design du logo */
+
+.Omni {
+    color: #1790DC;
+}
+
+.Soin {
+    color: #50DD8F;
+}
+
+
+/* partie du bouton de connexion */
+
+.connexion {
+    height: auto;
+    width: auto;
+    flex-wrap: wrap;
+}
+
+
+/* lien du bouton connexion  */
+
+.connexion a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    background-image: linear-gradient(to right, #4AC29A 0%, #BDFFF3 51%, #4AC29A 100%);
+    display: inline-block;
+    background-size: 200% auto;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.8rem;
+    transition: 0.5s;
+    text-align: center;
+}
+
+
+/* transition hover */
+
+.connexion:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.connexion a:hover {
+    color: #1790DC;
+    background-position: right center;
+    transform: translateY(-2px);
+}
+
+nav ul li a:hover {
+    color: #1790DC;
+}
+
+
+/* Responsive du header */
+
+
+/* Tablette et petits laptops (moins de 992px) */
+
+@media screen and (max-width: 992px) {
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 5%;
-        max-width: 1400px;
-        margin: 0 auto;
+        padding: 1rem 3%;
+        /* On réduit légèrement les marges */
     }
-    
-    nav ul li {
-        list-style: none;
+    nav ul {
+        gap: 1.5rem;
+        /* On resserre les liens */
     }
-    
-    li a {
-        text-decoration: none;
-        flex-wrap: wrap;
-        text-decoration: none;
-        color: #333;
-        font-size: 1.8rem;
-        font-weight: 600;
-        transition: color 0.3s;
-    }
-    /* design du logo */
-    
-    .Omni {
-        color: #1790DC;
-    }
-    
-    .Soin {
-        color: #50DD8F;
-    }
-    /* partie du bouton de connexion */
-    
-    .connexion {
-        height: auto;
-        width: auto;
-        flex-wrap: wrap;
-    }
-    /* lien du bouton connexion  */
-    
-    .connexion a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.3rem;
-        background-image: linear-gradient(to right, #4AC29A 0%, #BDFFF3 51%, #4AC29A 100%);
-        display: inline-block;
-        background-size: 200% auto;
-        padding: 1rem 2rem;
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        text-transform: uppercase;
-        border-radius: 0.8rem;
-        transition: 0.5s;
-        text-align: center;
-    }
-    /* transition hover */
-    
-    .connexion:hover {
-        background-position: right center;
-        color: #fff;
-        text-decoration: none;
-    }
-    
-    .connexion a:hover {
-        color: #1790DC;
-        background-position: right center;
-        transform: translateY(-2px);
-    }
-    
-    nav ul li a:hover {
-        color: #1790DC;
-    }
-    /* Responsive du header */
-    /* Tablette et petits laptops (moins de 992px) */
-    
-    @media screen and (max-width: 992px) {
-        nav {
-            padding: 1rem 3%;
-            /* On réduit légèrement les marges */
-        }
-        nav ul {
-            gap: 1.5rem;
-            /* On resserre les liens */
-        }
-    }
-    /* Smartphone et Tablettes en portrait (moins de 768px) */
-    
-    @media screen and (max-width: 768px) {
-        nav {
-            flex-direction: column;
-            /* je met en mod verti pour éviter le chevauchement */
-            gap: 2rem;
-            padding: 2rem 5%;
-        }
-        nav ul {
-            justify-content: center;
-            padding: 0;
-            width: 100%;
-        }
-        nav ul li a {
-            font-size: 1.6rem;
-            /* Légère réduction pour rendre ca frais au visuel */
-        }
-        .connexion {
-            width: 100%;
-            text-align: center;
-        }
-        .connexion a {
-            width: 80%;
-            /* Bouton plus large pour le pouce sur mobile */
-            max-width: 300px;
-        }
-    }
-    /* Très petits smartphones (moins de 480px) */
-    
-    @media screen and (max-width: 480px) {
-        nav ul {
-            flex-direction: column;
-            /* Les liens passent en liste verticale */
-            gap: 1rem;
-            text-align: center;
-        }
-        .logo {
-            font-size: 2rem;
-        }
-    }
-    /* Desktop Standard 1024px et plus */
-    
-    @media screen and (min-width: 1024px) {
-        nav {
-            padding: 1.5rem 5%;
-            /* On donne de l'air au header */
-        }
-        /* Animation subtile pour les liens en mode PC */
-        nav ul li a::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #1790DC;
-            transition: width 0.3s;
-        }
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-    }
-    /* Très Grands Écrans / TV (1440px et plus) */
-    
-    @media screen and (min-width: 1440px) {
-        nav {
-            max-width: 1400px;
-            /*  empêche le menu de s'éparpiller trop loin */
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-        .logo {
-            font-size: 2.6rem;
-            /*  augmente la visibilité sur grand écran */
-        }
-    }
-/* hero1*/
-    
-    .hero1 {
-        width: auto;
-        background-image: linear-gradient(to right , #3b6fcf61,#000000a9 ), url(./Images/téléconsultations.png);
-        background-repeat: no-repeat;
-        /* 3. Centrer l'image horizontalement et verticalement */
-        background-position: center;
-        /* 4. COUVRIR toute la zone (La clé du responsive) */
-        background-size: cover;
-        /* 5. Fixer l'image ou la laisser défiler */
-        background-attachment: scroll;
-        /* 6. Hauteur minimale pour que l'image soit visible ossi pour les mobiles */
-        min-height: 100vh;
-        /* 7. Centrer le contenu par-dessus pour prendre la taille minimal 1vh =1% */
-        /* alignement des elements */
+}
+
+
+/* Smartphone et Tablettes en portrait (moins de 768px) */
+
+@media screen and (max-width: 768px) {
+    nav {
         flex-direction: column;
+        /* je met en mod verti pour éviter le chevauchement */
+        gap: 2rem;
+        padding: 2rem 5%;
     }
-    /* partie qui contient le text et la search bar */
-    
-    .hero1 h1 {
-        color: #ffffffef;
-        font-family: 'poppins';
-        font-weight: 400;
-        font-size: 3rem;
-        font-style: oblique;
-        /* partie du text et input deplacement */
-        padding-top: 11%;
-        padding-left: 13%;
-    }
-    /* le search c est le formulaire  */
-    
-    .search {
-        width: 100%;
-        max-width: 50rem;
-        background-color: #fff;
-        border-radius: 0.8rem;
-        padding: 1rem 2rem;
-        margin-left: 13%;
-        margin-top: 2%;
-        display: flex;
-        align-items: center;
-        gap: 4%;
-    }
-    /* le svg voila ca  */
-    
-    .search-icon {
-        width: 2rem;
-        height: 2rem;
-        color: #888;
-        flex-shrink: 0;
-    }
-    
-    .search input {
-        background: transparent;
-        border: none;
-        flex: 1;
-        outline: none;
-        font-size: 2rem;
-        color: #07141088;
-    }
-
-    .search :hover {
-        box-shadow: 0 0 3rem rgb(0, 0, 0);
-    }
-    ::placeholder {
-    color: #000000a9; 
-} 
-    /* fin dela partie .hero1 */
-    /*  RESPONSIVE  POur les tel telé pc et bureau
-  */
-    /* 1. TÉLÉVISION / ULTRA-WIDE)
-   l'affichage pour les très grands écrans > 1920px */
-    
-    @media screen and (min-width: 1921px) {
-        .hero1 h1 {
-            font-size: 5rem;
-            padding-top: 150px;
-        }
-        .search {
-            max-width: 70rem;
-            padding: 1.5rem 3rem;
-        }
-    }
-    /* 2. DESKTOP STANDARD  */
-    
-    @media screen and (max-width: 1400px) {
-        .hero1 h1 {
-            font-size: 3.5rem;
-        }
-    }
-    /* 3. TABLETTE Entre 768px et 1024px */
-    
-    @media screen and (max-width: 1024px) {
-        .hero1 {
-            display: flex;
-            align-items: center;
-            /*  centre tout horizontalement */
-            justify-content: center;
-            /* centre verticalement */
-        }
-        .hero1 h1 {
-            padding-left: 0;
-            /*  annule le 13% que j ai mis pour bouger les  text /input */
-            padding-top: 0;
-            text-align: center;
-            font-size: 2.8rem;
-            width: 90%;
-        }
-        .search {
-            margin-left: 0;
-            /*  annule ton 13% */
-            margin-top: 2rem;
-            width: 80%;
-        }
-    }
-    /* 4. MOBILE Moins de 767px */
-    
-    @media screen and (max-width: 767px) {
-        .hero1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-        }
-        .hero1 h1 {
-            padding-left: 0;
-            padding-top: 0;
-            text-align: center;
-            font-size: 1.8rem;
-            /* Taille lisible sur les lalé */
-            line-height: 1.2;
-        }
-        /*  saut de ligne sur tel pour éviter les textes brisés */
-        .hero1 h1 br {
-            display: none;
-        }
-        .search {
-            margin-left: 0;
-            margin-top: 1.5rem;
-            width: 100%;
-            padding: 0.8rem 1.2rem;
-            gap: 10px;
-        }
-        .search input {
-            font-size: 1.1rem;
-            /*  évite le zoom auto sur iPhone font < 16px*/
-        }
-        .search-icon {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-    }
-    /* debut du main */
-    /* fin de la responsive et debut de la sect5*/
-    .sect5 {
-        height: auto;
-        width: 100%;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        padding: 3%;
-        gap: 6rem;
-        background: #005C97;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    }
-    /*    titre de la section 5 */
-    
-    .sect5 h1 {
-        text-align: center;
-        text-decoration: underline;
-        font-family: 'poppins';
-        font-weight: bolder;
-        font-style: italic;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        font-size: 3rem;
-    }
-
-    .mal_tete {
-        border: 2px solid rgb(24, 184, 209);
-        height: 10rem;
-        width: 10%;
-        background-image: url(./Images/telé_\ consults\ mal\ de\ tete.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 8rem;
-        margin: auto;
-    }
-    /* premiere div  qui  contient le text */
-    
-    .blct1 {
-        width: 50%;
-        height: auto;
-        display: flex;
+    nav ul {
         justify-content: center;
-        align-items: center;
-        background-color: #00e5a1;
-        border-radius: 0.8rem;
+        padding: 0;
+        width: 100%;
     }
-    
-    .blct1 h1 {
-        color: #1790DC;
-        text-decoration: none;
-        font-style: italic;
-        font-family: 'poppins';
-        font-weight: bolder;
-        font-weight: 300;
+    nav ul li a {
+        font-size: 1.6rem;
+        /* Légère réduction pour rendre ca frais au visuel */
     }
-    
-    .blct2 {
-        width: 70%;
-        height: auto;
-        background-color: #fff;
-        padding: 2%;
-    }
-    
-    .blct2 h1 {
-        font-weight: bolder;
-    }
-    
-    .blct2 p {
-        font-size: 1.9rem;
+    .connexion {
+        width: 100%;
         text-align: center;
-        font-family: 'poppins';
-        font-style: italic;
     }
-    
-    .blct3 {
+    .connexion a {
         width: 80%;
-        height: auto;
-        background-color: #fff;
-        padding: 2%;
+        /* Bouton plus large pour le pouce sur mobile */
+        max-width: 300px;
     }
-    
-    .blct3 h1 {
-        font-weight: bolder;
-    }
+}
 
-    .mal_ventre {
-        border: 2px solid rgb(61, 217, 14);
-        height: 10rem;
-        width: 8%;
-        background-image: url(./Images/telé_\ consults\ mal\ de\ ventre.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 7rem;
-        margin: auto;
-    }
-    
-    .blct3 p {
-        font-size: 1.9rem;
+
+/* Très petits smartphones (moins de 480px) */
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        /* Les liens passent en liste verticale */
+        gap: 1rem;
         text-align: center;
-        font-family: 'poppins';
-        font-style: italic;
     }
-    /* partie de transition hover*/
-    .blct2:hover, .blct3:hover {
-    transform: translateY(-2rem); 
-    box-shadow: 0 0  2rem 3rem rgba(0, 0, 0, 0.1); /* L'ombre s'accentue */
-    border: 1rem solid #00e5a053; 
+    .logo {
+        font-size: 2rem;
+    }
+}
+
+
+/* Desktop Standard 1024px et plus */
+
+@media screen and (min-width: 1024px) {
+    nav {
+        padding: 1.5rem 5%;
+        /* On donne de l'air au header */
+    }
+    /* Animation subtile pour les liens en mode PC */
+    nav ul li a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #1790DC;
+        transition: width 0.3s;
+    }
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+}
+
+
+/* Très Grands Écrans / TV (1440px et plus) */
+
+@media screen and (min-width: 1440px) {
+    nav {
+        max-width: 1400px;
+        /*  empêche le menu de s'éparpiller trop loin */
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    .logo {
+        font-size: 2.6rem;
+        /*  augmente la visibilité sur grand écran */
+    }
+}
+
+
+/* hero1*/
+
+.hero1 {
+    width: auto;
+    background-image: linear-gradient(to right, #3b6fcf61, #000000a9), url(./Images/téléconsultations.png);
+    background-repeat: no-repeat;
+    /* 3. Centrer l'image horizontalement et verticalement */
+    background-position: center;
+    /* 4. COUVRIR toute la zone (La clé du responsive) */
+    background-size: cover;
+    /* 5. Fixer l'image ou la laisser défiler */
+    background-attachment: scroll;
+    /* 6. Hauteur minimale pour que l'image soit visible ossi pour les mobiles */
+    min-height: 100vh;
+    /* 7. Centrer le contenu par-dessus pour prendre la taille minimal 1vh =1% */
+    /* alignement des elements */
+    flex-direction: column;
+}
+
+
+/* partie qui contient le text et la search bar */
+
+.hero1 h1 {
+    color: #ffffffef;
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: oblique;
+    /* partie du text et input deplacement */
+    padding-top: 11%;
+    padding-left: 13%;
+}
+
+
+/* le search c est le formulaire  */
+
+.search {
+    max-width: 50rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    padding: 1rem 2rem;
+    margin-left: 13%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+}
+
+
+/* le svg voila ca  */
+
+.search-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #888;
+    flex-shrink: 0;
+}
+
+.search input {
+    background: transparent;
+    border: none;
+    flex: 1;
+    outline: none;
+    font-size: 2rem;
+    color: #07141088;
+}
+
+.search :hover {
+    box-shadow: 0 0 3rem rgb(0, 0, 0);
+}
+
+ ::placeholder {
+    color: #000000a9;
+}
+
+
+/* fin dela partie .hero1 */
+
+
+/*  RESPONSIVE  POur les tel telé pc et bureau
+  */
+
+
+/* 1. TÉLÉVISION / ULTRA-WIDE)
+   l'affichage pour les très grands écrans > 1920px */
+
+@media screen and (min-width: 1921px) {
+    .hero1 h1 {
+        font-size: 5rem;
+        padding-top: 150px;
+    }
+    .search {
+        max-width: 70rem;
+        padding: 1.5rem 3rem;
+    }
+}
+
+
+/* 2. DESKTOP STANDARD  */
+
+@media screen and (max-width: 1400px) {
+    .hero1 h1 {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* 3. TABLETTE Entre 768px et 1024px */
+
+@media screen and (max-width: 1024px) {
+    .hero1 {
+        display: flex;
+        align-items: center;
+        /*  centre tout horizontalement */
+        justify-content: center;
+        /* centre verticalement */
+    }
+    .hero1 h1 {
+        padding-left: 0;
+        /*  annule le 13% que j ai mis pour bouger les  text /input */
+        padding-top: 0;
+        text-align: center;
+        font-size: 2.8rem;
+        width: 90%;
+    }
+    .search {
+        margin-left: 0;
+        /*  annule ton 13% */
+        margin-top: 2rem;
+        width: 80%;
+    }
+}
+
+
+/* 4. MOBILE Moins de 767px */
+
+@media screen and (max-width: 767px) {
+    .hero1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .hero1 h1 {
+        padding-left: 0;
+        padding-top: 0;
+        text-align: center;
+        font-size: 1.8rem;
+        /* Taille lisible sur les lalé */
+        line-height: 1.2;
+    }
+    /*  saut de ligne sur tel pour éviter les textes brisés */
+    .hero1 h1 br {
+        display: none;
+    }
+    .search {
+        margin-left: 0;
+        margin-top: 1.5rem;
+        width: 100%;
+        padding: 0.8rem 1.2rem;
+        gap: 10px;
+    }
+    .search input {
+        font-size: 1.1rem;
+        /*  évite le zoom auto sur iPhone font < 16px*/
+    }
+    .search-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+
+/* debut du main */
+
+
+/* fin de la responsive et debut de la sect5*/
+
+.sect5 {
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    gap: 6rem;
+    background: #005C97;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #363795, #005C97);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #363795, #005C97);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/*    titre de la section 5 */
+
+.sect5 h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'poppins';
+    font-weight: bolder;
+    font-style: italic;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 3rem;
+}
+
+.mal_tete {
+    border: 2px solid rgb(24, 184, 209);
+    height: 10rem;
+    width: 10%;
+    background-image: url(./Images/telé_\ consults\ mal\ de\ tete.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8rem;
+    margin: auto;
+}
+
+
+/* premiere div  qui  contient le text */
+
+.blct1 {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00e5a1;
+    border-radius: 0.8rem;
+}
+
+.blct1 h1 {
+    color: #1790DC;
+    text-decoration: none;
+    font-style: italic;
+    font-family: 'poppins';
+    font-weight: bolder;
+    font-weight: 300;
+}
+
+.blct2 {
+    width: 70%;
+    height: auto;
+    background-color: #fff;
+    padding: 2%;
+}
+
+.blct2 h1 {
+    font-weight: bolder;
+}
+
+.blct2 p {
+    font-size: 1.9rem;
+    text-align: center;
+    font-family: 'poppins';
+    font-style: italic;
+}
+
+.blct3 {
+    width: 80%;
+    height: auto;
+    background-color: #fff;
+    padding: 2%;
+}
+
+.blct3 h1 {
+    font-weight: bolder;
+}
+
+.mal_ventre {
+    border: 2px solid rgb(61, 217, 14);
+    height: 10rem;
+    width: 8%;
+    background-image: url(./Images/telé_\ consults\ mal\ de\ ventre.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 7rem;
+    margin: auto;
+}
+
+.blct3 p {
+    font-size: 1.9rem;
+    text-align: center;
+    font-family: 'poppins';
+    font-style: italic;
+}
+
+
+/* partie de transition hover*/
+
+.blct2:hover,
+.blct3:hover {
+    transform: translateY(-2rem);
+    box-shadow: 0 0 2rem 3rem rgba(0, 0, 0, 0.1);
+    /* L'ombre s'accentue */
+    border: 1rem solid #00e5a053;
     border-radius: 2rem;
 }
 
+
 /* parties du boutons de rcherche */
-    
-    .prendre_rendezvous {
-        color: white;
-        border: none;
-        padding: 12px 30px;
-        border-radius: 10px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-right: 2%;
-        font-size: 1.5rem;
-        background-image: linear-gradient(to right, #0E3A45 0%, #0E3A45 51%, #44db41d5 100%);
-        display: inline-block;
-        background-size: 200% auto;
-        padding: 1rem 2rem;
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        text-transform: uppercase;
-        border-radius: 0.8rem;
-        transition: 0.5s;
-        text-align: center;
-    }
-    /* parties du lien de boutons de recherche */
-    
-    .prendre_rendezvous a {
-        text-decoration: none;
-        color: #fff;
-    }
-    /* les transision hover du site  */
-    
-    .prendre_rendezvous:hover {
-        background-position: right center;
-        color: #fff;
-        text-decoration: none;
-        transform: translateY(-2px);
-    }
+
+.prendre_rendezvous {
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2%;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right, #0E3A45 0%, #0E3A45 51%, #44db41d5 100%);
+    display: inline-block;
+    background-size: 200% auto;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.8rem;
+    transition: 0.5s;
+    text-align: center;
+}
+
+
+/* parties du lien de boutons de recherche */
+
+.prendre_rendezvous a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* les transision hover du site  */
+
+.prendre_rendezvous:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+
 /* fin du code */
+
+
 /* dbut de la responsive */
 
+
 /* 1. ÉCRANS TV arge screens > 1400px */
+
 @media screen and (min-width: 1401px) {
     .sect5 {
         padding: 5% 10%;
     }
-    .blct2, .blct3 {
-        width: 60%; /* resserre un peu pour éviter que les lignes de texte soient trop longues */
+    .blct2,
+    .blct3 {
+        width: 60%;
+        /* resserre un peu pour éviter que les lignes de texte soient trop longues */
     }
 }
 
+
 /* 3. TABLETTE iPad, Galaxy Tab, etc */
+
 @media screen and (max-width: 1024px) {
     .sect5 {
         gap: 4rem;
@@ -532,68 +605,74 @@
     .blct1 {
         width: 80%;
     }
-    .blct2, .blct3 {
+    .blct2,
+    .blct3 {
         width: 90%;
     }
-    .mal_tete, .mal_ventre {
+    .mal_tete,
+    .mal_ventre {
         width: 100px;
         height: 100px;
     }
 }
 
+
 /* 4. MOBILE LARGE et SMARTPHONES iPhone, Android */
+
 @media screen and (max-width: 768px) {
     .sect5 h1 {
-        font-size: 2rem; /* Titre plus petit pour mobile */
+        font-size: 2rem;
+        /* Titre plus petit pour mobile */
     }
-    
     .blct1 {
         width: 95%;
     }
-
     .blct1 h1 {
         font-size: 1.5rem;
     }
-
-    .blct2, .blct3 {
+    .blct2,
+    .blct3 {
         width: 100%;
         padding: 5%;
     }
-
-    .blct2 p, .blct3 p {
-        font-size: 1.2rem; /* Lecture confortable sur besclat */
-        text-align: left; /* Meilleure lisibilité mobile */
+    .blct2 p,
+    .blct3 p {
+        font-size: 1.2rem;
+        /* Lecture confortable sur besclat */
+        text-align: left;
+        /* Meilleure lisibilité mobile */
     }
-
-    .mal_tete, .mal_ventre {
+    .mal_tete,
+    .mal_ventre {
         width: 80px;
         height: 80px;
-        border-radius: 50%; /* Assure la rondeur bien dodue */
+        border-radius: 50%;
+        /* Assure la rondeur bien dodue */
     }
-
     .prendre_rendezvous {
         width: 90%;
         font-size: 1.2rem;
     }
 }
 
+
 /* 5. PETIT MOBILE Écrans < 480px */
+
 @media screen and (max-width: 480px) {
     .sect5 {
         gap: 2.5rem;
         padding: 20px 10px;
     }
-
     .sect5 h1 {
         font-size: 1.8rem;
     }
-
-    .blct2:hover, .blct3:hover {
-        transform: none; /* Désactivation du hover sur tactile pour éviter les bugs en mode itel */
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    .blct2:hover,
+    .blct3:hover {
+        transform: none;
+        /* Désactivation du hover sur tactile pour éviter les bugs en mode itel */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 }
-
 
 footer {
     height: auto;
@@ -601,36 +680,53 @@ footer {
     justify-content: space-between;
     padding: 3%;
     background-color: #0E3A45;
-
 }
+
+
 /* le  bloc de tout les elements de gauche */
+
 .BLOC {
     height: auto;
     width: 30%;
     padding: 1.2rem 2rem;
 }
+
+
 /* la div quui cointient les icones  */
-.icon_envelop{
+
+.icon_envelop {
     display: flex;
     align-items: center;
     gap: 2%;
 }
+
+
 /* j ai ciblé les svg */
+
 .icon_envelop svg {
     height: 4rem;
     width: 4rem;
 }
+
+
 /* j ai ciblé les p ratacher au different   p */
+
 .icon_envelop p {
     color: #fff;
     font-family: 'poppins';
     font-size: 1.4rem;
 }
+
+
 /* le petit paragraphe de fin c est un span que j ai ajouté */
+
 .description {
     color: #50DD8F;
 }
+
+
 /* le bloc du milieu */
+
 .BLOC2 {
     height: auto;
     width: 30%;
@@ -640,14 +736,20 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
+
+
 /* le titre du bloc du milieu */
+
 .BLOC2 h1 {
     font-family: 'poppins';
     font-style: italic;
     font-weight: bolder;
     color: #fff;
 }
+
+
 /* les lien du bloc du milieu */
+
 .BLOC2 a {
     text-decoration: none;
     font-size: 1.8rem;
@@ -655,7 +757,10 @@ footer {
     font-family: 'poppins';
     color: #1790DC;
 }
+
+
 /* bloc de fin */
+
 .BLOC3 {
     height: auto;
     width: 28%;
@@ -666,7 +771,10 @@ footer {
     display: flex;
     justify-content: space-around;
 }
+
+
 /* le texte du bloc de fin  */
+
 .BLOC3 h1 {
     font-size: 1.8rem;
     font-family: 'poppins';
@@ -675,12 +783,16 @@ footer {
     color: #fff;
 }
 
+
 /* partie des transitions hover */
 
 .BLOC2 a:hover {
     color: #4AC29A;
 }
+
+
 /* partie du (c) */
+
 .oni p {
     color: #fff;
     font-family: 'poppins';
@@ -690,91 +802,103 @@ footer {
     font-weight: 300;
 }
 
+
 /* dbut de la responsive */
 
+
 /* 1. TABLETTE */
+
 @media screen and (max-width: 1024px) {
     footer {
         padding: 5%;
     }
-    
-    .BLOC, .BLOC2, .BLOC3 {
-        width: 45%; /* deux colonnes pour éviter l'écrasement */
+    .BLOC,
+    .BLOC2,
+    .BLOC3 {
+        width: 45%;
+        /* deux colonnes pour éviter l'écrasement */
         padding: 1rem;
     }
-
     .BLOC3 {
-        width: 100%; /* Le bloc social prend la largeur en bas */
+        width: 100%;
+        /* Le bloc social prend la largeur en bas */
         align-items: center;
         text-align: center;
     }
 }
 
+
 /* 2. MOBILE Smartphones */
+
 @media screen and (max-width: 768px) {
     footer {
-        flex-direction: column; /* Stack vertical obligatoire */
+        flex-direction: column;
+        /* Stack vertical obligatoire */
         align-items: center;
         text-align: center;
     }
-
-    .BLOC, .BLOC2, .BLOC3 {
-        width: 100%; /* Chaque bloc prend toute la place */
+    .BLOC,
+    .BLOC2,
+    .BLOC3 {
+        width: 100%;
+        /* Chaque bloc prend toute la place */
         padding: 1.5rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Séparation légère */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        /* Séparation légère */
     }
-
     .BLOC3 {
         border-bottom: none;
     }
-
     .icon_envelop {
-        justify-content: center; /* Centrage des icônes sur mobile */
+        justify-content: center;
+        /* Centrage des icônes sur mobile */
         margin-bottom: 10px;
     }
-
     .icon_envelop p {
-        font-size: 1.1rem; /*  réduit la taille pour éviter les retours à la ligne bete bete */
+        font-size: 1.1rem;
+        /*  réduit la taille pour éviter les retours à la ligne bete bete */
     }
-
     .BLOC2 a {
         font-size: 1.4rem;
         margin: 8px 0;
     }
-    
     .icon_envelop svg {
         height: 3rem;
         width: 3rem;
     }
 }
 
+
 /* 3. PETIT MOBILE  */
+
 @media screen and (max-width: 480px) {
     .icon_envelop p {
         font-size: 0.9rem;
     }
-
-    .BLOC2 h1, .BLOC3 h1 {
+    .BLOC2 h1,
+    .BLOC3 h1 {
         font-size: 1.5rem;
     }
 }
 
+
 /* 4. TÉLÉVISION  */
+
 @media screen and (min-width: 1921px) {
     footer {
-        padding: 2% 15%; /*  augmente les marges latérales pour centrer le contenu */
+        padding: 2% 15%;
+        /*  augmente les marges latérales pour centrer le contenu */
     }
-
-    .BLOC, .BLOC2, .BLOC3 {
+    .BLOC,
+    .BLOC2,
+    .BLOC3 {
         max-width: 500px;
     }
-
     .icon_envelop p {
-        font-size: 1.8rem; /*scale vers le haut pour la visibilité de loin */
+        font-size: 1.8rem;
+        /*scale vers le haut pour la visibilité de loin */
     }
-
     .BLOC2 a {
         font-size: 2.2rem;
     }
 }
-

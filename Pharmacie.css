@@ -1,314 +1,828 @@
 * {
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-    }
-    
-    html {
-        /* On ramène la base à 10px (62.5% de 16px)  POur utiliser le rem*/
-        font-size: 62.5%;
-    }
-    
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #E4EEF0;
-    }
-    
-    header {
-        height: auto;
-        width: auto;
-        background-color: #fff;
-        flex-wrap: wrap;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.243);
-    }
-    /* partie des lien de navigations */
-    
-    nav ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding-left: 2%;
-        padding-right: 3%;
-        list-style: none;
-        gap: 2rem;
-    }
-    
-    .logo {
-        text-decoration: none;
-        font-size: 2.2rem;
-        font-weight: 700;
-        font-style: italic;
-    }
-    
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    /* On ramène la base à 10px (62.5% de 16px)  POur utiliser le rem*/
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E4EEF0;
+}
+
+header {
+    height: auto;
+    width: auto;
+    background-color: #fff;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.243);
+}
+
+
+/* partie des lien de navigations */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 3%;
+    list-style: none;
+    gap: 2rem;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+
+/* design du logo */
+
+.Omni {
+    color: #1790DC;
+}
+
+.Soin {
+    color: #50DD8F;
+}
+
+
+/* partie du bouton de connexion */
+
+.connexion {
+    height: auto;
+    width: auto;
+    flex-wrap: wrap;
+}
+
+
+/* lien du bouton connexion  */
+
+.connexion a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    background-image: linear-gradient(to right, #4AC29A 0%, #BDFFF3 51%, #4AC29A 100%);
+    display: inline-block;
+    background-size: 200% auto;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.8rem;
+    transition: 0.5s;
+    text-align: center;
+}
+
+
+/* transition hover */
+
+.connexion:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.connexion a:hover {
+    color: #1790DC;
+    background-position: right center;
+    transform: translateY(-2px);
+}
+
+nav ul li a:hover {
+    color: #1790DC;
+}
+
+
+/* Responsive du header */
+
+
+/* Tablette et petits laptops (moins de 992px) */
+
+@media screen and (max-width: 992px) {
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 5%;
-        max-width: 1400px;
-        margin: 0 auto;
+        padding: 1rem 3%;
+        /* On réduit légèrement les marges */
     }
-    
-    nav ul li {
-        list-style: none;
+    nav ul {
+        gap: 1.5rem;
+        /* On resserre les liens */
     }
-    
-    li a {
-        text-decoration: none;
-        flex-wrap: wrap;
-        text-decoration: none;
-        color: #333;
-        font-size: 1.8rem;
-        font-weight: 600;
-        transition: color 0.3s;
+}
+
+
+/* Smartphone et Tablettes en portrait (moins de 768px) */
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        /* je met en mod verti pour éviter le chevauchement */
+        gap: 2rem;
+        padding: 2rem 5%;
     }
-    /* design du logo */
-    
-    .Omni {
-        color: #1790DC;
+    nav ul {
+        justify-content: center;
+        padding: 0;
+        width: 100%;
     }
-    
-    .Soin {
-        color: #50DD8F;
+    nav ul li a {
+        font-size: 1.6rem;
+        /* Légère réduction pour rendre ca frais au visuel */
     }
-    /* partie du bouton de connexion */
-    
     .connexion {
-        height: auto;
-        width: auto;
-        flex-wrap: wrap;
-    }
-    /* lien du bouton connexion  */
-    
-    .connexion a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.3rem;
-        background-image: linear-gradient(to right, #4AC29A 0%, #BDFFF3 51%, #4AC29A 100%);
-        display: inline-block;
-        background-size: 200% auto;
-        padding: 1rem 2rem;
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        text-transform: uppercase;
-        border-radius: 0.8rem;
-        transition: 0.5s;
+        width: 100%;
         text-align: center;
     }
-    /* transition hover */
-    
-    .connexion:hover {
-        background-position: right center;
-        color: #fff;
-        text-decoration: none;
+    .connexion a {
+        width: 80%;
+        /* Bouton plus large pour le pouce sur mobile */
+        max-width: 300px;
     }
-    
-    .connexion a:hover {
-        color: #1790DC;
-        background-position: right center;
-        transform: translateY(-2px);
-    }
-    
-    nav ul li a:hover {
-        color: #1790DC;
-    }
-    /* Responsive du header */
-    /* Tablette et petits laptops (moins de 992px) */
-    
-    @media screen and (max-width: 992px) {
-        nav {
-            padding: 1rem 3%;
-            /* On réduit légèrement les marges */
-        }
-        nav ul {
-            gap: 1.5rem;
-            /* On resserre les liens */
-        }
-    }
-    /* Smartphone et Tablettes en portrait (moins de 768px) */
-    
-    @media screen and (max-width: 768px) {
-        nav {
-            flex-direction: column;
-            /* je met en mod verti pour éviter le chevauchement */
-            gap: 2rem;
-            padding: 2rem 5%;
-        }
-        nav ul {
-            justify-content: center;
-            padding: 0;
-            width: 100%;
-        }
-        nav ul li a {
-            font-size: 1.6rem;
-            /* Légère réduction pour rendre ca frais au visuel */
-        }
-        .connexion {
-            width: 100%;
-            text-align: center;
-        }
-        .connexion a {
-            width: 80%;
-            /* Bouton plus large pour le pouce sur mobile */
-            max-width: 300px;
-        }
-    }
-    /* Très petits smartphones (moins de 480px) */
-    
-    @media screen and (max-width: 480px) {
-        nav ul {
-            flex-direction: column;
-            /* Les liens passent en liste verticale */
-            gap: 1rem;
-            text-align: center;
-        }
-        .logo {
-            font-size: 2rem;
-        }
-    }
-    /* Desktop Standard 1024px et plus */
-    
-    @media screen and (min-width: 1024px) {
-        nav {
-            padding: 1.5rem 5%;
-            /* On donne de l'air au header */
-        }
-        /* Animation subtile pour les liens en mode PC */
-        nav ul li a::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #1790DC;
-            transition: width 0.3s;
-        }
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-    }
-    /* Très Grands Écrans / TV (1440px et plus) */
-    
-    @media screen and (min-width: 1440px) {
-        nav {
-            max-width: 1400px;
-            /*  empêche le menu de s'éparpiller trop loin */
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-        .logo {
-            font-size: 2.6rem;
-            /*  augmente la visibilité sur grand écran */
-        }
+}
 
-    }
-    
-    .hero1 {
-        width: auto;
-        background-image: linear-gradient(to right, #000000e3,#ffffff00), url(./Images/hero\ de\ pharmacie.png);
-        background-repeat: no-repeat;
-        /* 3. Centrer l'image horizontalement et verticalement */
-        background-position: center;
-        /* 4. COUVRIR toute la zone (La clé du responsive) */
-        background-size: cover;
-        /* 5. Fixer l'image ou la laisser défiler */
-        background-attachment: scroll;
-        /* 6. Hauteur minimale pour que l'image soit visible ossi pour les mobiles */
-        min-height: 100vh;
-        /* 7. Centrer le contenu par-dessus pour prendre la taille minimal 1vh =1% */
-        /* alignement des elements */
+
+/* Très petits smartphones (moins de 480px) */
+
+@media screen and (max-width: 480px) {
+    nav ul {
         flex-direction: column;
+        /* Les liens passent en liste verticale */
+        gap: 1rem;
+        text-align: center;
     }
-    /* partie qui contient le text et la search bar */
-    
+    .logo {
+        font-size: 2rem;
+    }
+}
+
+
+/* Desktop Standard 1024px et plus */
+
+@media screen and (min-width: 1024px) {
+    nav {
+        padding: 1.5rem 5%;
+        /* On donne de l'air au header */
+    }
+    /* Animation subtile pour les liens en mode PC */
+    nav ul li a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #1790DC;
+        transition: width 0.3s;
+    }
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+}
+
+
+/* Très Grands Écrans / TV (1440px et plus) */
+
+@media screen and (min-width: 1440px) {
+    nav {
+        max-width: 1400px;
+        /*  empêche le menu de s'éparpiller trop loin */
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    .logo {
+        font-size: 2.6rem;
+        /*  augmente la visibilité sur grand écran */
+    }
+}
+
+.hero1 {
+    width: auto;
+    background-image: linear-gradient(to right, #000000e3, #ffffff00), url(./Images/hero\ de\ pharmacie.png);
+    background-repeat: no-repeat;
+    /* 3. Centrer l'image horizontalement et verticalement */
+    background-position: center;
+    /* 4. COUVRIR toute la zone (La clé du responsive) */
+    background-size: cover;
+    /* 5. Fixer l'image ou la laisser défiler */
+    background-attachment: scroll;
+    /* 6. Hauteur minimale pour que l'image soit visible ossi pour les mobiles */
+    min-height: 100vh;
+    /* 7. Centrer le contenu par-dessus pour prendre la taille minimal 1vh =1% */
+    /* alignement des elements */
+    flex-direction: column;
+}
+
+
+/* partie qui contient le text et la search bar */
+
+.hero1 h1 {
+    color: #ffffffef;
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: oblique;
+    /* partie du text et input deplacement */
+    padding-top: 11%;
+    padding-left: 13%;
+}
+
+.hero1 p {
+    font-size: 1.8rem;
+    font-family: "poppins";
+    font-style: oblique;
+    color: #E4EEF0;
+    padding-top: 2%;
+    padding-left: 13%;
+}
+
+
+/*  RESPONSIVE  POur les tel telé pc et bureau
+
+/* 1. TABLETTE Format iPad, tablettes portrait - max 1024px */
+
+@media screen and (max-width: 1024px) {
     .hero1 h1 {
-        color: #ffffffef;
-        font-family: 'poppins';
-        font-weight: 400;
-        font-size: 3rem;
-        font-style: oblique;
-        /* partie du text et input deplacement */
-        padding-top: 11%;
-        padding-left: 13%;
+        font-size: 2.5rem;
+        padding-left: 8%;
+        padding-top: 15%;
     }
-    
     .hero1 p {
+        font-size: 1.4rem;
+        padding-left: 8%;
+    }
+}
+
+
+/* 2. MOBILE max 768px */
+
+@media screen and (max-width: 768px) {
+    .hero1 {
+        /* centre le texte sur mobile pour un meilleur rendu visuel */
+        text-align: center;
+        background-image: linear-gradient(to top, #000000e3, #00000063), url(./Images/hero\ de\ pharmacie.png);
+    }
+    .hero1 h1 {
+        font-size: 2rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 25%;
+    }
+    .hero1 p {
+        font-size: 1.1rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    /* On masque les retours à la ligne forcés du HTML pour éviter les coupures bizarres */
+    .hero1 br {
+        display: none;
+    }
+}
+
+
+/* 3. PETIT MOBILE iPhone SE, etc. - max 480px */
+
+@media screen and (max-width: 480px) {
+    .hero1 h1 {
+        font-size: 1.6rem;
+        padding-top: 35%;
+    }
+    .hero1 p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* 4. TÉLÉVISION et ÉCRANS 4K min 1920px */
+
+@media screen and (min-width: 1920px) {
+    .hero1 h1 {
+        font-size: 4.5rem;
+        padding-left: 15%;
+        padding-top: 10%;
+    }
+    .hero1 p {
+        font-size: 2.5rem;
+        padding-left: 15%;
+    }
+}
+
+
+/* fin  de a responsive debut partie bar de recherche medicament */
+
+.bar_de_recherche {
+    height: auto;
+    background-color: #2B4560;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* le search c est le formulaire  */
+
+.search {
+    width: 80%;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+}
+
+
+/* le svg voila ca  */
+
+.search-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #888;
+    flex-shrink: 0;
+}
+
+.search input {
+    background: transparent;
+    border: none;
+    flex: 1;
+    outline: none;
+    font-size: 2rem;
+    color: #07141088;
+}
+
+
+/* la section */
+
+.les_medicament_plus_carte {
+    height: auto;
+    background-color: #28323B;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3%;
+}
+
+.Ct2 {
+    height: 34.5rem;
+    width: 18%;
+    border-radius: 1rem;
+    background-image: url(./Images/google\ \ maps.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 0.5rem solid white;
+}
+
+.Ct1 {
+    height: auto;
+    width: 75%;
+    padding: 1%;
+    background-color: transparent;
+}
+
+
+/* la div blanche qui contient les elemnts */
+
+.ph {
+    height: 10.7rem;
+    width: 99%;
+    display: flex;
+    align-items: center;
+    background-color: #393E44;
+    box-shadow: 0 0 1.2rem whitesmoke;
+    border-bottom: 2px solid white;
+}
+
+
+/* la div qui contient l images */
+
+.ph1 {
+    height: 10rem;
+    width: 8%;
+    margin-left: 2%;
+    background-image: url(./Images/logo\ de\ pharmacie.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* la div qui contient  tout les elemntx texte  et autre a coté de l' images */
+
+.ph2 {
+    height: 10rem;
+    width: 87%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* partie des  span color */
+
+.ph2 h1 {
+    text-decoration: none;
+    font-style: oblique;
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 1.9rem;
+    margin-left: 2%;
+    color: #fff;
+}
+
+.ph2 p {
+    color: #fff;
+}
+
+.dispo {
+    color: #2cd19a;
+}
+
+.heur {
+    color: #E4EEF0;
+}
+
+.ph2 p {
+    font-style: oblique;
+    font-size: 1.6rem;
+    font-family: 'poppins';
+    margin-right: 2%;
+}
+
+
+/* RESPONSIVE de la partie pharmacie et bar de recherche
+
+/* 1. TÉLÉVISION Écrans > 1920px */
+
+@media screen and (min-width: 1920px) {
+    .search {
+        width: 60%;
+    }
+    /*  évite que la barre soit trop étirée */
+    .les_medicament_plus_carte {
+        padding: 2% 10%;
+    }
+}
+
+
+/* 2. TABLETTE et PETIT PC max 1100px */
+
+@media screen and (max-width: 1100px) {
+    .les_medicament_plus_carte {
+        flex-direction: column;
+        /*  empile la liste et la carte */
+        gap: 30px;
+    }
+    .Ct1,
+    .Ct2 {
+        width: 100%;
+        /* Les deux prennent toute la largeur */
+    }
+    .Ct2 {
+        height: 25rem;
+        /*  une hauteur fixe à la carte */
+        order: -1;
+        /* Optionnel: place la carte AU-DESSUS de la liste sur mobile */
+    }
+    .ph1 {
+        width: 15%;
+    }
+    /*  agrandit un peu le logo */
+}
+
+
+/* 3. MOBILE max 768px */
+
+@media screen and (max-width: 768px) {
+    .search {
+        width: 95%;
+        padding: 0.8rem 1rem;
+    }
+    .search input {
+        font-size: 1.2rem;
+        /* Réduction du texte d'input */
+    }
+    .ph {
+        height: auto;
+        padding: 10px 0;
+    }
+    .ph1 {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+    .ph2 {
+        flex-direction: column;
+        /* Texte et infos l'un sous l'autre */
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+    }
+    .ph2 h1 {
+        font-size: 1.3rem;
+        margin-left: 10px;
+    }
+    .ph2 p {
+        font-size: 1.1rem;
+        margin-left: 10px;
+    }
+    /* cache les BR du HTML pour éviter les gros espaces vides */
+    .ph2 h1 br {
+        display: none;
+    }
+}
+
+
+/* 4. PETIT MOBILE max 480px */
+
+@media screen and (max-width: 480px) {
+    .bar_de_recherche {
+        padding: 5% 2%;
+    }
+    .search-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .ph1 {
+        display: none;
+    }
+    /*  cache le logo pour gagner de la place */
+    .ph2 h1 {
+        font-size: 1.1rem;
+    }
+    .ph2 p {
+        font-size: 0.9rem;
+    }
+    .Ct2 {
+        height: 18rem;
+    }
+}
+
+
+/* fin du main  debut du footer  */
+
+footer {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    background-color: #0E3A45;
+}
+
+
+/* le  bloc de tout les elements de gauche */
+
+.BLOC {
+    height: auto;
+    width: 30%;
+    padding: 1.2rem 2rem;
+}
+
+
+/* la div quui cointient les icones  */
+
+.icon_envelop {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+
+/* j ai ciblé les svg */
+
+.icon_envelop svg {
+    height: 4rem;
+    width: 4rem;
+}
+
+
+/* j ai ciblé les p ratacher au different   p */
+
+.icon_envelop p {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.4rem;
+}
+
+
+/* le petit paragraphe de fin c est un span que j ai ajouté */
+
+.description {
+    color: #50DD8F;
+}
+
+
+/* le bloc du milieu */
+
+.BLOC2 {
+    height: auto;
+    width: 30%;
+    padding: 1.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* le titre du bloc du milieu */
+
+.BLOC2 h1 {
+    font-family: 'poppins';
+    font-style: italic;
+    font-weight: bolder;
+    color: #fff;
+}
+
+
+/* les lien du bloc du milieu */
+
+.BLOC2 a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'poppins';
+    color: #1790DC;
+}
+
+
+/* bloc de fin */
+
+.BLOC3 {
+    height: auto;
+    width: 28%;
+    padding: 1.2rem 2rem;
+    padding-left: 5%;
+    padding-bottom: 4%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* le texte du bloc de fin  */
+
+.BLOC3 h1 {
+    font-size: 1.8rem;
+    font-family: 'poppins';
+    font-weight: bolder;
+    font-style: italic;
+    color: #fff;
+}
+
+
+/* partie des transitions hover */
+
+.BLOC2 a:hover {
+    color: #4AC29A;
+}
+
+
+/* partie du (c) */
+
+.oni p {
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bolder;
+    font-weight: 300;
+}
+
+
+/* fin du code */
+
+
+/* dbut de la responsive */
+
+
+/* 1. TABLETTE */
+
+@media screen and (max-width: 1024px) {
+    footer {
+        padding: 5%;
+    }
+    .BLOC,
+    .BLOC2,
+    .BLOC3 {
+        width: 45%;
+        /* deux colonnes pour éviter l'écrasement */
+        padding: 1rem;
+    }
+    .BLOC3 {
+        width: 100%;
+        /* Le bloc social prend la largeur en bas */
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+/* 2. MOBILE Smartphones */
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        /* Stack vertical obligatoire */
+        align-items: center;
+        text-align: center;
+    }
+    .BLOC,
+    .BLOC2,
+    .BLOC3 {
+        width: 100%;
+        /* Chaque bloc prend toute la place */
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        /* Séparation légère */
+    }
+    .BLOC3 {
+        border-bottom: none;
+    }
+    .icon_envelop {
+        justify-content: center;
+        /* Centrage des icônes sur mobile */
+        margin-bottom: 10px;
+    }
+    .icon_envelop p {
+        font-size: 1.1rem;
+        /*  réduit la taille pour éviter les retours à la ligne bete bete */
+    }
+    .BLOC2 a {
+        font-size: 1.4rem;
+        margin: 8px 0;
+    }
+    .icon_envelop svg {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+
+/* 3. PETIT MOBILE  */
+
+@media screen and (max-width: 480px) {
+    .icon_envelop p {
+        font-size: 0.9rem;
+    }
+    .BLOC2 h1,
+    .BLOC3 h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* 4. TÉLÉVISION  */
+
+@media screen and (min-width: 1921px) {
+    footer {
+        padding: 2% 15%;
+        /*  augmente les marges latérales pour centrer le contenu */
+    }
+    .BLOC,
+    .BLOC2,
+    .BLOC3 {
+        max-width: 500px;
+    }
+    .icon_envelop p {
         font-size: 1.8rem;
-        font-family: "poppins";
-        font-style: oblique;
-        color: #E4EEF0;
-        padding-top: 2%;
-        padding-left: 13%;
+        /*scale vers le haut pour la visibilité de loin */
     }
-    
-    
-    /*  RESPONSIVE  POur les tel telé pc et bureau
-  */
-    /* 1. TÉLÉVISION / ULTRA-WIDE)
-   l'affichage pour les très grands écrans > 1920px */
-    
-    @media screen and (min-width: 1921px) {
-        .hero1 h1 {
-            font-size: 5rem;
-            padding-top: 150px;
-        }
-        .search {
-            max-width: 70rem;
-            padding: 1.5rem 3rem;
-        }
+    .BLOC2 a {
+        font-size: 2.2rem;
     }
-    /* 2. DESKTOP STANDARD  */
-    
-    @media screen and (max-width: 1400px) {
-        .hero1 h1 {
-            font-size: 3.5rem;
-        }
-    }
-    /* 3. TABLETTE Entre 768px et 1024px */
-    
-    @media screen and (max-width: 1024px) {
-        .hero1 {
-            display: flex;
-            align-items: center;
-            /*  centre tout horizontalement */
-            justify-content: center;
-            /* centre verticalement */
-        }
-        .hero1 h1 {
-            padding-left: 0;
-            /*  annule le 13% que j ai mis pour bouger les  text /input */
-            padding-top: 0;
-            text-align: center;
-            font-size: 2.8rem;
-            width: 90%;
-        }
-        
-    }
-    /* 4. MOBILE Moins de 767px */
-    
-    @media screen and (max-width: 767px) {
-        .hero1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-        }
-        .hero1 h1 {
-            padding-left: 0;
-            padding-top: 0;
-            text-align: center;
-            font-size: 1.8rem;
-            /* Taille lisible sur les lalé */
-            line-height: 1.2;
-        }
-        /*  saut de ligne sur tel pour éviter les textes brisés */
-        .hero1 h1 br {
-            display: none;
-        }
-        
-    }
+}

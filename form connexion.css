@@ -1,53 +1,166 @@
-.search-bar-form {
+:root {
+    --bg-dark: #2c343f;
+    --header-bg: #3b4b59;
+    --card-bg: #3a414a;
+    --accent-green: #2ecc71;
+    --accent-red: #e74c3c;
+    --text-white: #ffffff;
+    --text-gray: #bdc3c7;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 900px;
+}
+
+
+/* Barre de recherche */
+
+.search-bar {
+    background-color: #d1d8e0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-bar i {
+    color: #555;
+    margin-right: 15px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-style: italic;
+    outline: none;
+}
+
+
+/* Layout Principal */
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.pharmacy-list {
+    flex: 2;
+}
+
+.map-container {
+    flex: 0.8;
+}
+
+
+/* Styles des Cartes */
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* L'effet de bordure blanche fine du haut */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-left {
     display: flex;
     align-items: center;
     gap: 15px;
-    background-color: transparent;
 }
 
-.input-wrapper {
+.icon-box {
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.icon-box img {
+    width: 100%;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.info p {
+    margin: 5px 0 0;
+    font-style: italic;
+    color: #eee;
+}
+
+.status {
+    color: var(--accent-green);
+    font-weight: bold;
+}
+
+
+/* Alignement droite de la carte */
+
+.card-right {
+    text-align: right;
     display: flex;
     align-items: center;
-    background: white;
-    border: 1px solid #dbdbdb;
-    border-radius: 8px;
-    padding: 5px 15px;
-    flex-grow: 1;
+    gap: 20px;
 }
 
-.field {
-    flex: 1;
-}
-
-
-/* LE SECRET : On retire le design par défaut des inputs */
-
-.field input,
-.field select {
-    width: 100%;
-    border: none;
-    outline: none;
-    /* Supprime le contour bleu au clic */
-    padding: 10px;
+.distance {
     font-style: italic;
-    color: #666;
-    background: transparent;
-    font-family: 'Poppins', sans-serif;
+    color: var(--text-gray);
 }
 
-.line-divider {
-    width: 1px;
-    height: 30px;
-    background-color: #eee;
-    margin: 0 10px;
+.med-status {
+    font-style: italic;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.btn-submit {
-    background-color: #7d73b2;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
+.med-status i {
+    color: var(--accent-green);
+    font-size: 1.5rem;
+}
+
+.med-status.out i {
+    color: var(--accent-red);
+}
+
+
+/* Simulation de la carte Google Map */
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    background-color: #a29bfe;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -239,7 +239,6 @@
     /* le search c est le formulaire  */
     
     .search {
-        width: 100%;
         max-width: 50rem;
         background-color: #fff;
         border-radius: 0.8rem;
@@ -1081,6 +1080,7 @@
         }
     }
     /* fin de la responsive et debut de la sect5*/
+    
     .sect5 {
         height: auto;
         width: 100%;
@@ -1161,252 +1161,275 @@
         font-style: italic;
     }
     /* partie de transition hover*/
-    .blct2:hover, .blct3:hover {
-    transform: translateY(-3rem); 
-    box-shadow: 0 0  2rem 3rem rgba(0, 0, 0, 0.1); /* L'ombre s'accentue */
-    border: 1rem solid #1790DC; 
-    border-radius: 2rem;
-}
+    
+    .blct2:hover,
+    .blct3:hover {
+        transform: translateY(-3rem);
+        box-shadow: 0 0 2rem 3rem rgba(0, 0, 0, 0.1);
+        /* L'ombre s'accentue */
+        border: 1rem solid #1790DC;
+        border-radius: 2rem;
+    }
     /*
     AJOUT RESPONSIVE  SECTION 5 
     */
-
-/* 1. TABLETTE  */
-@media screen and (max-width: 1024px) {
-    .sect5 {
-        gap: 3.5rem; 
-        padding: 5% 2%;
-    }
-    .blct1 {
-        width: 75%; /* Plus large pour ne pas déborder le texte */
-    }
-    .blct2, .blct3 {
-        width: 85%;
-    }
-}
-
-/* 2. MOBILE   */
-@media screen and (max-width: 480px) {
-    .sect5 {
-        gap: 2rem; 
-        padding: 10% 4%;
-    }
-    .sect5 h1 {
-        font-size: 1.8rem; 
-    }
-    .blct1, .blct2, .blct3 {
-        width: 95%; 
-        padding: 6% 4%;
-    }
-    .blct1 h1 {
-        font-size: 1.4rem;
-    }
-    .blct2 p, .blct3 p {
-        font-size: 1.1rem; 
-        text-align: left; 
-    }
-}
-
-/*  3. TÉLÉVISION  */
-@media screen and (min-width: 1920px) {
-    .sect5 {
-        max-width: 1600px; 
-        margin: 0 auto; /* Centrage de la section sur l'écran TV */
-        gap: 8rem;
-    }
-    .sect5 h1 {
-        font-size: 4.5rem;
-    }
-    .blct1 h1 {
-        font-size: 3rem;
-    }
-    .blct2 p, .blct3 p {
-        font-size: 2.2rem; /* Grand pour une lecture à distance (*/
-        line-height: 1.6;
-    }
-}
-
-/* fin du main  debut du footer  */
-
-footer {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 3%;
-    background-color: #0E3A45;
-
-}
-/* le  bloc de tout les elements de gauche */
-.BLOC {
-    height: auto;
-    width: 30%;
-    padding: 1.2rem 2rem;
-}
-/* la div quui cointient les icones  */
-.icon_envelop{
-    display: flex;
-    align-items: center;
-    gap: 2%;
-}
-/* j ai ciblé les svg */
-.icon_envelop svg {
-    height: 4rem;
-    width: 4rem;
-}
-/* j ai ciblé les p ratacher au different   p */
-.icon_envelop p {
-    color: #fff;
-    font-family: 'poppins';
-    font-size: 1.4rem;
-}
-/* le petit paragraphe de fin c est un span que j ai ajouté */
-.description {
-    color: #50DD8F;
-}
-/* le bloc du milieu */
-.BLOC2 {
-    height: auto;
-    width: 30%;
-    padding: 1.2rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-/* le titre du bloc du milieu */
-.BLOC2 h1 {
-    font-family: 'poppins';
-    font-style: italic;
-    font-weight: bolder;
-    color: #fff;
-}
-/* les lien du bloc du milieu */
-.BLOC2 a {
-    text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: 400;
-    font-family: 'poppins';
-    color: #1790DC;
-}
-/* bloc de fin */
-.BLOC3 {
-    height: auto;
-    width: 28%;
-    padding: 1.2rem 2rem;
-    padding-left: 5%;
-    padding-bottom: 4%;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-around;
-}
-/* le texte du bloc de fin  */
-.BLOC3 h1 {
-    font-size: 1.8rem;
-    font-family: 'poppins';
-    font-weight: bolder;
-    font-style: italic;
-    color: #fff;
-}
-
-/* partie des transitions hover */
-
-.BLOC2 a:hover {
-    color: #4AC29A;
-}
-/* partie du (c) */
-.oni p {
-    color: #fff;
-    font-family: 'poppins';
-    font-size: 1.3rem;
-    font-style: italic;
-    font-weight: bolder;
-    font-weight: 300;
-}
-/* fin du code */
-/* dbut de la responsive */
-
-/* 1. TABLETTE */
-@media screen and (max-width: 1024px) {
-    footer {
-        padding: 5%;
-    }
+    /* 1. TABLETTE  */
     
-    .BLOC, .BLOC2, .BLOC3 {
-        width: 45%; /* deux colonnes pour éviter l'écrasement */
-        padding: 1rem;
+    @media screen and (max-width: 1024px) {
+        .sect5 {
+            gap: 3.5rem;
+            padding: 5% 2%;
+        }
+        .blct1 {
+            width: 75%;
+            /* Plus large pour ne pas déborder le texte */
+        }
+        .blct2,
+        .blct3 {
+            width: 85%;
+        }
     }
-
-    .BLOC3 {
-        width: 100%; /* Le bloc social prend la largeur en bas */
-        align-items: center;
-        text-align: center;
+    /* 2. MOBILE   */
+    
+    @media screen and (max-width: 480px) {
+        .sect5 {
+            gap: 2rem;
+            padding: 10% 4%;
+        }
+        .sect5 h1 {
+            font-size: 1.8rem;
+        }
+        .blct1,
+        .blct2,
+        .blct3 {
+            width: 95%;
+            padding: 6% 4%;
+        }
+        .blct1 h1 {
+            font-size: 1.4rem;
+        }
+        .blct2 p,
+        .blct3 p {
+            font-size: 1.1rem;
+            text-align: left;
+        }
     }
-}
-
-/* 2. MOBILE Smartphones */
-@media screen and (max-width: 768px) {
+    /*  3. TÉLÉVISION  */
+    
+    @media screen and (min-width: 1920px) {
+        .sect5 {
+            max-width: 1600px;
+            margin: 0 auto;
+            /* Centrage de la section sur l'écran TV */
+            gap: 8rem;
+        }
+        .sect5 h1 {
+            font-size: 4.5rem;
+        }
+        .blct1 h1 {
+            font-size: 3rem;
+        }
+        .blct2 p,
+        .blct3 p {
+            font-size: 2.2rem;
+            /* Grand pour une lecture à distance (*/
+            line-height: 1.6;
+        }
+    }
+    /* fin du main  debut du footer  */
+    
     footer {
-        flex-direction: column; /* Stack vertical obligatoire */
-        align-items: center;
-        text-align: center;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 3%;
+        background-color: #0E3A45;
     }
-
-    .BLOC, .BLOC2, .BLOC3 {
-        width: 100%; /* Chaque bloc prend toute la place */
-        padding: 1.5rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Séparation légère */
+    /* le  bloc de tout les elements de gauche */
+    
+    .BLOC {
+        height: auto;
+        width: 30%;
+        padding: 1.2rem 2rem;
     }
-
-    .BLOC3 {
-        border-bottom: none;
-    }
-
+    /* la div quui cointient les icones  */
+    
     .icon_envelop {
-        justify-content: center; /* Centrage des icônes sur mobile */
-        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 2%;
     }
-
-    .icon_envelop p {
-        font-size: 1.1rem; /*  réduit la taille pour éviter les retours à la ligne bete bete */
-    }
-
-    .BLOC2 a {
-        font-size: 1.4rem;
-        margin: 8px 0;
-    }
+    /* j ai ciblé les svg */
     
     .icon_envelop svg {
-        height: 3rem;
-        width: 3rem;
+        height: 4rem;
+        width: 4rem;
     }
-}
-
-/* 3. PETIT MOBILE  */
-@media screen and (max-width: 480px) {
+    /* j ai ciblé les p ratacher au different   p */
+    
     .icon_envelop p {
-        font-size: 0.9rem;
+        color: #fff;
+        font-family: 'poppins';
+        font-size: 1.4rem;
     }
-
-    .BLOC2 h1, .BLOC3 h1 {
-        font-size: 1.5rem;
+    /* le petit paragraphe de fin c est un span que j ai ajouté */
+    
+    .description {
+        color: #50DD8F;
     }
-}
-
-/* 4. TÉLÉVISION  */
-@media screen and (min-width: 1921px) {
-    footer {
-        padding: 2% 15%; /*  augmente les marges latérales pour centrer le contenu */
+    /* le bloc du milieu */
+    
+    .BLOC2 {
+        height: auto;
+        width: 30%;
+        padding: 1.2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
-
-    .BLOC, .BLOC2, .BLOC3 {
-        max-width: 500px;
+    /* le titre du bloc du milieu */
+    
+    .BLOC2 h1 {
+        font-family: 'poppins';
+        font-style: italic;
+        font-weight: bolder;
+        color: #fff;
     }
-
-    .icon_envelop p {
-        font-size: 1.8rem; /*scale vers le haut pour la visibilité de loin */
-    }
-
+    /* les lien du bloc du milieu */
+    
     .BLOC2 a {
-        font-size: 2.2rem;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 400;
+        font-family: 'poppins';
+        color: #1790DC;
     }
-}
+    /* bloc de fin */
+    
+    .BLOC3 {
+        height: auto;
+        width: 28%;
+        padding: 1.2rem 2rem;
+        padding-left: 5%;
+        padding-bottom: 4%;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+    }
+    /* le texte du bloc de fin  */
+    
+    .BLOC3 h1 {
+        font-size: 1.8rem;
+        font-family: 'poppins';
+        font-weight: bolder;
+        font-style: italic;
+        color: #fff;
+    }
+    /* partie des transitions hover */
+    
+    .BLOC2 a:hover {
+        color: #4AC29A;
+    }
+    /* partie du (c) */
+    
+    .oni p {
+        color: #fff;
+        font-family: 'poppins';
+        font-size: 1.3rem;
+        font-style: italic;
+        font-weight: bolder;
+        font-weight: 300;
+    }
+    /* fin du code */
+    /* dbut de la responsive */
+    /* 1. TABLETTE */
+    
+    @media screen and (max-width: 1024px) {
+        footer {
+            padding: 5%;
+        }
+        .BLOC,
+        .BLOC2,
+        .BLOC3 {
+            width: 45%;
+            /* deux colonnes pour éviter l'écrasement */
+            padding: 1rem;
+        }
+        .BLOC3 {
+            width: 100%;
+            /* Le bloc social prend la largeur en bas */
+            align-items: center;
+            text-align: center;
+        }
+    }
+    /* 2. MOBILE Smartphones */
+    
+    @media screen and (max-width: 768px) {
+        footer {
+            flex-direction: column;
+            /* Stack vertical obligatoire */
+            align-items: center;
+            text-align: center;
+        }
+        .BLOC,
+        .BLOC2,
+        .BLOC3 {
+            width: 100%;
+            /* Chaque bloc prend toute la place */
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            /* Séparation légère */
+        }
+        .BLOC3 {
+            border-bottom: none;
+        }
+        .icon_envelop {
+            justify-content: center;
+            /* Centrage des icônes sur mobile */
+            margin-bottom: 10px;
+        }
+        .icon_envelop p {
+            font-size: 1.1rem;
+            /*  réduit la taille pour éviter les retours à la ligne bete bete */
+        }
+        .BLOC2 a {
+            font-size: 1.4rem;
+            margin: 8px 0;
+        }
+        .icon_envelop svg {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+    /* 3. PETIT MOBILE  */
+    
+    @media screen and (max-width: 480px) {
+        .icon_envelop p {
+            font-size: 0.9rem;
+        }
+        .BLOC2 h1,
+        .BLOC3 h1 {
+            font-size: 1.5rem;
+        }
+    }
+    /* 4. TÉLÉVISION  */
+    
+    @media screen and (min-width: 1921px) {
+        footer {
+            padding: 2% 15%;
+            /*  augmente les marges latérales pour centrer le contenu */
+        }
+        .BLOC,
+        .BLOC2,
+        .BLOC3 {
+            max-width: 500px;
+        }
+        .icon_envelop p {
+            font-size: 1.8rem;
+            /*scale vers le haut pour la visibilité de loin */
+        }
+        .BLOC2 a {
+            font-size: 2.2rem;
+        }
+    }

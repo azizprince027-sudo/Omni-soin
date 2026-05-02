@@ -1,47 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="form connexion.css">
+    <title>Interface Pharmacie</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Pour les icônes (loupe, check, croix) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <form class="search-container">
-        <form class="search-bar-form">
-            <div class="input-wrapper">
-                <div class="field">
-                    <input type="text" placeholder="Spécialité" list="specs">
-                    <datalist id="specs">
-                <option value="Cardiologue">
-                <option value="Dentiste">
-                <option value="Généraliste">
-            </datalist>
+
+    <div class="container">
+        <!-- Barre de recherche -->
+        <header class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Recherchez un medicament">
+        </header>
+
+        <main class="content">
+            <!-- Liste des pharmacies -->
+            <section class="pharmacy-list">
+
+                <!-- Carte 1 -->
+                <div class="card">
+                    <div class="card-left">
+                        <div class="icon-box">
+                            <img src="https://cdn-icons-png.flaticon.com/512/883/883360.png" alt="icon">
+                        </div>
+                        <div class="info">
+                            <h3>Pharmacie du plateau</h3>
+                            <p><span class="status">Ouvert</span> - ferme 22h</p>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="distance">300m</span>
+                        <span class="med-status">Pracetamol <i class="fas fa-check"></i></span>
+                    </div>
                 </div>
 
-                <div class="line-divider"></div>
-
-                <div class="field">
-                    <input type="text" placeholder="Ville (ex: Abidjan)">
+                <!-- Carte 2 -->
+                <div class="card">
+                    <div class="card-left">
+                        <div class="icon-box">
+                            <img src="https://cdn-icons-png.flaticon.com/512/883/883360.png" alt="icon">
+                        </div>
+                        <div class="info">
+                            <h3>Pharmacie Jehova</h3>
+                            <p><span class="status">Ouvert</span> - ferme 20h</p>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="distance">1km</span>
+                        <span class="med-status out">Tramadole <i class="fas fa-times"></i></span>
+                    </div>
                 </div>
 
-                <div class="line-divider"></div>
-
-                <div class="field">
-                    <select>
-                <option value="" disabled selected>Disponibilité</option>
-                <option value="now">Maintenant</option>
-                <option value="today">Aujourd'hui</option>
-                <option value="week">Cette semaine</option>
-            </select>
+                <!-- Carte 3 -->
+                <div class="card">
+                    <div class="card-left">
+                        <div class="icon-box">
+                            <img src="https://cdn-icons-png.flaticon.com/512/883/883360.png" alt="icon">
+                        </div>
+                        <div class="info">
+                            <h3>Pharmacie st ANE</h3>
+                            <p><span class="status">Ouvert</span> - ferme 21h</p>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="distance">2km</span>
+                        <span class="med-status">insulinne <i class="fas fa-check"></i></span>
+                    </div>
                 </div>
-            </div>
 
-            <button type="submit" class="btn-submit">rechercher</button>
-        </form>
-    </form>
+            </section>
+
+            <!-- Section Carte/Map -->
+            <aside class="map-container">
+                <div class="map-placeholder">
+                    <!-- Image de remplacement pour la carte -->
+                    <img src="https://via.placeholder.com/200x400" alt="Carte">
+                </div>
+            </aside>
+        </main>
+    </div>
+
 </body>
 
 </html>
