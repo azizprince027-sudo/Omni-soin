@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omni Soin</title>
+    <link rel="stylesheet" href="form vsiteur.css">
+</head>
+
+<body>
+    <div class="registration-container">
+        <!-- LE logo -->
+        <a class="logo" href="index.html"><span class="Omni">Omni<span class="Soin">Soin</span>
+            </a>
+        <div class="registration-card">
+            <h2>Inscription</h2>
+            <form id="proForm">
+                <!-- Ligne 1: Nom / Contact / Prénom -->
+                <div class="row-triple">
+                    <div class="input-group">
+                        <label>Nom</label>
+                        <input type="text" name="nom">
+                    </div>
+                    <div class="input-group">
+                        <label>Contact</label>
+                        <input type="text" name="contact">
+                    </div>
+                    <div class="input-group">
+                        <label>Prenom</label>
+                        <input type="text" name="prenom">
+                    </div>
+                </div>
+                <!-- Spécialité / Année -->
+                <div class="row-double">
+                    <div class="input-group">
+                        <label>Date de naisance</label>
+                        <input type="text" name="specialite">
+                    </div>
+                    <div class="input-group">
+                        <label>Nationalité</label>
+                        <input type="text" name="annee_diplome">
+                    </div>
+                </div>
+                <!-- Zones d'Upload (, CNI, CMU) -->
+
+                <div class="upload-section">
+                    <label>CNI (Carte Nationales D' identité)</label>
+                    <div class="drop-zone">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <p>Déposez votre CNI</p>
+                        <span>Format accepté: PDF | Taille max: 10Mo</span>
+                        <input type="file" hidden accept=".pdf">
+                    </div>
+                </div>
+                <div class="upload-section">
+                    <label>CMU (Carte de Maladies Universelles)</label>
+                    <div class="drop-zone">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <p>Déposez votre CMU</p>
+                        <span>Format accepté: PDF | Taille max: 10Mo</span>
+                        <input type="file" hidden accept=".pdf">
+                    </div>
+                </div>
+                <!-- Identifiants -->
+                <div class="row-double">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="input-group">
+                        <label>Mots de passse</label>
+                        <input type="password" name="password">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Soumettre</button>
+            </form>
+        </div>
+    </div>
+    <script src="form visiteur.js"></script>
+</body>
+
+</html>

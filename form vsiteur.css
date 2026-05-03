@@ -1,0 +1,150 @@
+.registration-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4f5;
+}
+
+.registration-card {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 40px;
+    border: 2px solid #52e0a1;
+    /* Bordure verte de l'image */
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family: "poppins";
+}
+
+
+/* Grilles */
+
+.row-triple {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 5px;
+    font-family: "poppins";
+}
+
+.input-group input {
+    width: 100%;
+    height: 35px;
+    background: #e9eff1;
+    border: none;
+    border-radius: 4px;
+}
+
+
+/* Style des Drop Zones */
+
+.upload-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.upload-section label {
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+    font-family: "poppins";
+}
+
+.drop-zone {
+    background: #e9eff1;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    border: 2px dashed transparent;
+    transition: 0.3s;
+}
+
+.drop-zone:hover {
+    border-color: #52e0a1;
+    background: #dfe8eb;
+}
+
+.drop-zone i {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.drop-zone p {
+    margin: 5px 0;
+    font-size: 1.3rem;
+    font-family: "poppins";
+}
+
+.drop-zone span {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.submit-btn {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 30px auto 0;
+    height: 45px;
+    background: linear-gradient(to right, #2e9df7, #52e0a5);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+/* design du logo */
+
+.Omni {
+    color: #1790DC;
+}
+
+.Soin {
+    color: #50DD8F;
+}
+
+.registration-container a {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+
+/* Responsive mobile */
+
+@media (max-width: 600px) {
+    .row-triple,
+    .row-double {
+        grid-template-columns: 1fr;
+        /* On empile tout sur une seule colonne */
+    }
+}
